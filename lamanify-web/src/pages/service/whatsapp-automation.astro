@@ -1,0 +1,23 @@
+
+---
+import Layout from '../../layouts/Layout.astro';
+import { Hero } from '../../components/whatsapp-automation/Hero';
+import { Features } from '../../components/whatsapp-automation/Features';
+import { Guarantee } from '../../components/whatsapp-automation/Guarantee';
+import { Roadmap } from '../../components/whatsapp-automation/Roadmap';
+import { Pricing } from '../../components/whatsapp-automation/Pricing';
+import { FAQ } from '../../components/whatsapp-automation/FAQ';
+---
+
+<Layout title="WhatsApp Marketing Automation for Clinics | Lamanify">
+
+  <main>
+    <Hero client:load />
+    <Features client:visible />
+    <Guarantee client:visible />
+    <Roadmap client:visible />
+    <Pricing client:visible />
+    <FAQ client:visible />
+  </main>
+
+</Layout>

@@ -1,0 +1,39 @@
+
+---
+import Layout from '../../layouts/Layout.astro';
+import { Hero } from '../../components/web-design/Hero';
+import { Features } from '../../components/web-design/Features';
+import { Process } from '../../components/web-design/Process';
+import { Portfolio } from '../../components/web-design/Portfolio';
+import { Pricing } from '../../components/web-design/Pricing';
+import { FAQ } from '../../components/web-design/FAQ';
+import { ArrowRight } from 'lucide-react';
+---
+
+<Layout title="Healthcare Website Design & Development | Lamanify" description="Professional, high-converting website design for healthcare clinics and dental practices in Malaysia.">
+	<main>
+		<Hero client:load />
+		<Features client:visible />
+        <Process client:visible />
+        <Portfolio client:visible />
+		<Pricing client:visible />
+        
+        {/* CTA Section */}
+        <section class="py-24 bg-brand relative overflow-hidden">
+             <div class="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10"></div>
+             <div class="container mx-auto px-4 sm:px-6 relative z-10 text-center">
+                <h2 class="text-3xl md:text-5xl font-black text-white mb-8 tracking-tight">
+                    Your Clinic Deserves More Than Just a Website.
+                </h2>
+                <p class="text-white/80 text-xl mb-12 max-w-2xl mx-auto">
+                    It deserves a growth engine that works 24/7 to get you patients.
+                </p>
+                <a href="#booking" class="inline-flex items-center gap-2 bg-white text-brand font-bold py-4 px-8 rounded-full shadow-2xl hover:shadow-xl hover:scale-105 transition-all duration-300">
+                    Get Your Free Proposal <ArrowRight class="h-5 w-5" />
+                </a>
+             </div>
+        </section>
+
+        <FAQ client:visible />
+	</main>
+</Layout>

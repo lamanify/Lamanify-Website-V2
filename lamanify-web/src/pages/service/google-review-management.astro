@@ -1,0 +1,19 @@
+
+---
+import Layout from '../../layouts/Layout.astro';
+import { Hero } from '../../components/google-review-management/Hero';
+import { Features } from '../../components/google-review-management/Features';
+import { Pricing } from '../../components/google-review-management/Pricing';
+import { FAQ } from '../../components/google-review-management/FAQ';
+---
+
+<Layout title="Google Review Management for Healthcare Providers | Lamanify">
+
+  <main>
+    <Hero client:load />
+    <Features client:visible />
+    <Pricing client:visible />
+    <FAQ client:visible />
+  </main>
+
+</Layout>

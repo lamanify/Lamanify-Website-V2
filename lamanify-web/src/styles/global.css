@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* The starting state: Invisible and pushed down */
+  .fade-up {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+
+  /* The active state: Visible and in place */
+  .fade-up.visible {
+    @apply opacity-100 translate-y-0;
+  }
+  
+  /* Stagger delays */
+  .delay-100 { transition-delay: 100ms; }
+  .delay-200 { transition-delay: 200ms; }
+  .delay-300 { transition-delay: 300ms; }
+}

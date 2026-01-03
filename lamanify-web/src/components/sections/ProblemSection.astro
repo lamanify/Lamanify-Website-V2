@@ -1,0 +1,72 @@
+---
+import { EyeOff, MousePointerClick, PhoneMissed, Building2, Stethoscope, ShieldCheck, Activity } from 'lucide-react';
+
+const problems = [
+  {
+    icon: EyeOff,
+    title: "1. The Visibility Gap",
+    description: "You are the expert, but your competitors are ranking #1 on Google. Patients can't choose you if they can't find you."
+  },
+  {
+    icon: MousePointerClick,
+    title: "2. The Conversion Failure",
+    description: "Generic websites look nice but don't convert. If your site takes 5 seconds to load, you just lost 40% of your potential patients."
+  },
+  {
+    icon: PhoneMissed,
+    title: "3. The Follow-Up Void",
+    description: "Front desks get busy. Missed calls and slow WhatsApp replies mean lost revenue. You need a system that captures leads instantly."
+  }
+];
+
+const trustedLogos = [
+  { name: "Clinic One", icon: Building2 },
+  { name: "MedCare", icon: Stethoscope },
+  { name: "G Partner", icon: Activity },
+  { name: "Meta", icon: Activity }, // Using Activity as placeholder for Meta infinite loop usually
+  { name: "MOH Compliant", icon: ShieldCheck },
+];
+---
+
+<section class="py-16 bg-white" id="foundations">
+  <!-- Trusted By Bar -->
+  <div class="container mx-auto px-4 mb-24">
+    <p class="text-center text-xs font-semibold tracking-widest text-slate-400 uppercase mb-8">
+      Trusted by forward-thinking medical practices in Malaysia
+    </p>
+    <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+      {trustedLogos.map((logo) => (
+        <div class="flex items-center gap-2 text-slate-500 font-medium">
+          <logo.icon className="w-5 h-5" />
+          <span>{logo.name}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container mx-auto px-4">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">
+        Great Doctors. <span class="text-brand">Hidden Clinics.</span>
+      </h2>
+      <p class="text-xl text-slate-600">
+        Why traditional marketing is failing you.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      {problems.map((item) => (
+        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300 group">
+          <div class="w-12 h-12 bg-white rounded-xl shadow-sm border border-slate-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <item.icon className="w-6 h-6 text-slate-700" />
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-4">{item.title}</h3>
+          <p class="text-slate-600 leading-relaxed text-[15px]">
+            {item.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

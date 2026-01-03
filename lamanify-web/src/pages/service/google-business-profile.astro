@@ -1,0 +1,23 @@
+
+---
+import Layout from '../../layouts/Layout.astro';
+import { Hero } from '../../components/services/google-business-profile/Hero';
+import { Features } from '../../components/services/google-business-profile/Features';
+import { Guarantee } from '../../components/services/google-business-profile/Guarantee';
+import { Pricing } from '../../components/services/google-business-profile/Pricing';
+import { Roadmap } from '../../components/services/google-business-profile/Roadmap';
+import { FAQ } from '../../components/services/google-business-profile/FAQ';
+---
+
+<Layout title="Google Business Profile (GBP) Optimization for Clinics | Lamanify">
+
+  <main>
+    <Hero client:load />
+    <Features client:visible />
+    <Guarantee client:visible />
+    <Pricing client:visible />
+    <Roadmap client:visible />
+    <FAQ client:visible />
+  </main>
+
+</Layout>

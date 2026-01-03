@@ -1,0 +1,133 @@
+---
+import { SEO } from 'astro-seo';
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  noindex?: boolean;
+}
+
+const { title, description, image, noindex = false } = Astro.props;
+
+// Site configuration
+const siteUrl = Astro.site?.toString() || 'https://lamanify.com';
+const canonicalURL = new URL(Astro.url.pathname, siteUrl);
+const defaultDescription = "Lamanify is a healthcare digital marketing agency specializing in high-converting websites, Google Ads, SEO, and patient growth strategies for clinics and healthcare businesses.";
+const defaultImage = `${siteUrl}/logo.png`;
+
+// JSON-LD Organization Schema for rich search results
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Lamanify",
+  "url": "https://www.lamanify.com",
+  "logo": "https://res.cloudinary.com/lamanify/image/upload/v1764535947/Lamanify_37_uvufej.webp",
+  "description": defaultDescription,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Level 23-1, Premier Suite, One Mont Kiara, Jalan Kiara, Mont Kiara",
+    "addressLocality": "Kuala Lumpur",
+    "postalCode": "50480",
+    "addressCountry": "MY"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+6011-5670-6510",
+    "email": "admin@lamanify.com",
+    "contactType": "customer service"
+  },
+  "sameAs": []
+};
+
+import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- Robots -->
+    <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"} />
+    
+    <!-- Google Fonts: Inter (Preloaded) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="https://res.cloudinary.com/lamanify/image/upload/v1764535947/Lamanify_37_uvufej.webp" as="image" type="image/webp" />
+    
+    <SEO
+      title={title}
+      description={description || defaultDescription}
+      canonical={canonicalURL.toString()}
+      openGraph={{
+        basic: {
+          title: title,
+          type: "website",
+          image: image || defaultImage,
+          url: canonicalURL.toString(),
+        },
+        optional: {
+          siteName: "Lamanify",
+          locale: "en_MY",
+        },
+        image: {
+          alt: title,
+          width: 1200,
+          height: 630,
+        }
+      }}
+      twitter={{
+        card: "summary_large_image",
+        site: "@lamanify",
+        creator: "@lamanify",
+        title: title,
+        description: description || defaultDescription,
+        image: image || defaultImage,
+        imageAlt: title,
+      }}
+      extend={{
+        meta: [
+          { name: "theme-color", content: "#e9204f" },
+          { name: "author", content: "Lamanify" },
+        ],
+      }}
+    />
+    
+    <!-- JSON-LD Structured Data for Organization -->
+    <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+  </head>
+  <body class="bg-white text-slate-900 antialiased">
+    <Navbar client:load />
+    <slot />
+    <Footer />
+    
+    <script>
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      const hiddenElements = document.querySelectorAll('.fade-up');
+      hiddenElements.forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>

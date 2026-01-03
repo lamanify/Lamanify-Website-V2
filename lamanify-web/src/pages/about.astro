@@ -1,0 +1,241 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Button } from '../components/ui/Button';
+import { Star, Heart, Lightbulb, ShieldCheck, ArrowRight } from 'lucide-react';
+
+const values = [
+    {
+        title: "Excellence",
+        description: "By giving attention to every detail, we create websites that far surpass the status quo. We give you only the best we can humanly create–because it’s just the right thing to do.",
+        icon: Star,
+        color: "text-brand",
+        bg: "bg-brand/10"
+    },
+    {
+        title: "Partnership",
+        description: "Much like a trusted friend, we’re ready to go the extra mile. We are here for you, striving to put your best interests first—regardless of project size or budget.",
+        icon: Heart,
+        color: "text-rose-500",
+        bg: "bg-rose-50"
+    },
+    {
+        title: "Creativity",
+        description: "To us, creativity is problem solving, and we believe in solving the impossible. We never settle for the first, easiest, or quickest solution.",
+        icon: Lightbulb,
+        color: "text-amber-500",
+        bg: "bg-amber-50"
+    },
+    {
+        title: "Integrity",
+        description: "Keeping our promises to you demonstrates our integrity. We also seek to maintain a spirit of transparent honesty in everything we do.",
+        icon: ShieldCheck,
+        color: "text-emerald-500",
+        bg: "bg-emerald-50"
+    }
+];
+---
+
+<Layout title="About Us | Lamanify - We Build Clinic Websites For Living">
+    <main>
+        {/* Hero Section */}
+        <section class="relative pt-32 pb-24 overflow-hidden bg-slate-900">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(var(--brand-rgb),0.15),transparent_50%)]"></div>
+            <div class="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10"></div>
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="max-w-4xl">
+                    <div class="fade-up inline-flex items-center rounded-full border border-brand/20 bg-brand/10 px-4 py-1.5 text-xs font-bold tracking-wider text-brand mb-8 uppercase">
+                        About Us
+                    </div>
+                    <h1 class="fade-up text-5xl md:text-7xl font-black text-white mb-8 tracking-tight leading-[1.1]">
+                        We Build <span class="text-brand">Clinic Websites</span> For Living.
+                    </h1>
+                    <p class="fade-up text-slate-400 text-xl md:text-2xl max-w-3xl leading-relaxed mb-10">
+                        Our mission is to assist our clients achieve growth through web technology and powerful marketing. We seek to unify the web and marketing journey to deliver a more remarkable buyer experience and, ultimately, drive growth for our clients.
+                    </p>
+                    <div class="fade-up flex flex-wrap gap-4">
+                        <Button client:load onClick={() => window.location.href = '/portfolio'} className="h-14 px-10 rounded-full text-lg font-bold shadow-lg shadow-brand/20">
+                            View Our Work
+                        </Button>
+                    </div>
+                </div>
+            </div>
+            
+            {/* Decorative Element */}
+            <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-brand opacity-10 blur-[120px] rounded-full"></div>
+        </section>
+
+        {/* Portfolio Preview / Mission Detail */}
+        <section class="py-24 bg-white relative overflow-hidden">
+            <div class="container mx-auto px-4">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="fade-up space-y-8">
+                        <div>
+                            <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">
+                                Creating Memorable Online Experience For Your Patients
+                            </h2>
+                            <p class="text-slate-600 text-lg leading-relaxed">
+                                We at Lamanify value collaboration. We take a holistic approach to creating websites that suit your needs and goals. We work hard to understand your market, audience and core business drivers so that we can make every design and engineering decision with a clear purpose and direction.
+                            </p>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="group cursor-pointer" onclick="window.location.href='/portfolio/klinik-pakar-wanita-aymira/'">
+                                <div class="relative aspect-[4/3] rounded-3xl overflow-hidden mb-4 shadow-xl group-hover:shadow-2xl transition-all duration-500">
+                                    <img 
+                                        src="https://www.lamanify.com/wp-content/uploads/2025/07/Klinik-Pakar-Wanita-Aymira-768x576.png.webp" 
+                                        alt="Klinik Pakar Wanita Aymira"
+                                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    />
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                                        <span class="text-white font-bold">Klinik Aymira</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="group cursor-pointer" onclick="window.location.href='/portfolio/klinik-d/'">
+                                <div class="relative aspect-[4/3] rounded-3xl overflow-hidden mb-4 shadow-xl group-hover:shadow-2xl transition-all duration-500">
+                                    <img 
+                                        src="https://www.lamanify.com/wp-content/uploads/2024/09/Lamanify-Website-Design-for-Clinics-Portfolio2-768x576.webp" 
+                                        alt="Klinik-D"
+                                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    />
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                                        <span class="text-white font-bold">Klinik-D</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="fade-up lg:pl-12">
+                        <div class="relative">
+                            <div class="absolute -inset-4 bg-brand/5 rounded-[40px] blur-2xl"></div>
+                            <div class="relative bg-slate-50 p-10 md:p-12 rounded-[32px] border border-slate-100 shadow-sm">
+                                <h3 class="text-2xl font-bold text-slate-900 mb-6">Our Focus</h3>
+                                <div class="space-y-6">
+                                    <div class="flex items-start gap-4">
+                                        <div class="w-10 h-10 rounded-full bg-brand/10 flex items-center justify-center shrink-0">
+                                            <ArrowRight class="w-5 h-5 text-brand" />
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-slate-900 mb-1">Healthcare Specialists</h4>
+                                            <p class="text-slate-600">Tailored digital systems for medical professionals in Malaysia.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-4">
+                                        <div class="w-10 h-10 rounded-full bg-brand/10 flex items-center justify-center shrink-0">
+                                            <ArrowRight class="w-5 h-5 text-brand" />
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-slate-900 mb-1">Growth Driven</h4>
+                                            <p class="text-slate-600">Every design decision is made to optimize for patient acquisition.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-4">
+                                        <div class="w-10 h-10 rounded-full bg-brand/10 flex items-center justify-center shrink-0">
+                                            <ArrowRight class="w-5 h-5 text-brand" />
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-slate-900 mb-1">Modern Tech</h4>
+                                            <p class="text-slate-600">Using the latest web standards for speed, SEO, and security.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {/* Values Section */}
+        <section class="py-24 bg-slate-50 relative overflow-hidden">
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-20 px-4">
+                    <h2 class="fade-up text-3xl md:text-5xl font-black text-slate-900 mb-6">Our Core Values</h2>
+                    <p class="fade-up text-slate-600 text-lg md:text-xl">
+                        The principles that guide every pixel we place and every line of code we write.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {values.map((v, i) => (
+                        <div class="fade-up group bg-white p-8 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                            <div class={`w-14 h-14 ${v.bg} rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500`}>
+                                <v.icon class={`w-7 h-7 ${v.color}`} />
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-900 mb-4">{v.title}</h3>
+                            <p class="text-slate-600 leading-relaxed text-sm md:text-base">
+                                {v.description}
+                            </p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        {/* CTA Section */}
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="relative rounded-[48px] bg-slate-900 p-12 md:p-20 overflow-hidden text-center">
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(var(--brand-rgb),0.1),transparent_70%)]"></div>
+                    <div class="relative z-10 max-w-3xl mx-auto">
+                        <h2 class="fade-up text-3xl md:text-5xl font-black text-white mb-8 leading-tight">
+                            Get The Growth Results You’ve Always Wanted
+                        </h2>
+                        <p class="fade-up text-slate-400 text-xl mb-12">
+                            Ready to transform your clinic's digital presence? Let's build something remarkable together.
+                        </p>
+                        <div class="fade-up flex flex-col sm:flex-row justify-center gap-4">
+                            <Button client:load onClick={() => window.location.href = '/contact'} className="h-14 px-10 rounded-full text-lg font-bold">
+                                Book a Strategy Call
+                            </Button>
+                            <Button client:load variant="outline" onClick={() => window.location.href = '/portfolio'} className="h-14 px-10 rounded-full text-lg font-bold border-white/20 text-white hover:bg-white/10">
+                                View Our Work
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>
+
+<script>
+    const setupFadeUp = () => {
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        const fadeElements = document.querySelectorAll('.fade-up');
+        fadeElements.forEach(el => observer.observe(el));
+    };
+
+    // Run on page load
+    setupFadeUp();
+
+    // Run on view transitions if enabled
+    document.addEventListener('astro:after-swap', setupFadeUp);
+</script>
+
+<style>
+    .fade-up {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s cubic-bezier(0.21, 0.45, 0.32, 0.9), transform 0.6s cubic-bezier(0.21, 0.45, 0.32, 0.9);
+    }
+
+    .fade-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>

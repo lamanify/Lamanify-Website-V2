@@ -1,0 +1,93 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { supabase } from '../../lib/supabase';
+
+const { data: posts, error } = await supabase
+  .from('blog_posts')
+  .select('*')
+  .eq('published', true)
+  .order('published_at', { ascending: false });
+
+if (error) {
+  console.error('Error fetching posts:', error);
+}
+---
+
+<Layout 
+  title="Blog | Lamanify" 
+  description="Stay updated with the latest trends and insights in healthcare digital marketing."
+>
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 mt-20">
+    <div class="text-center mb-16">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">
+        Lamanify <span class="bg-gradient-to-r from-[#e9204f] to-pink-500 bg-clip-text text-transparent">Insights</span>
+      </h1>
+      <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+        Expert advice, industry trends, and proven strategies to help your healthcare practice grow in the digital age.
+      </p>
+    </div>
+
+    {posts && posts.length > 0 ? (
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {posts.map((post) => (
+          <article class="flex flex-col bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group">
+            {post.featured_image && (
+              <div class="relative h-56 overflow-hidden">
+                <img 
+                  src={post.featured_image} 
+                  alt={post.title}
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div class="absolute top-4 left-4">
+                  <span class="px-3 py-1 text-xs font-semibold bg-white/90 backdrop-blur-sm text-[#e9204f] rounded-full uppercase tracking-wider">
+                    {post.category || 'Updates'}
+                  </span>
+                </div>
+              </div>
+            )}
+            <div class="p-8 flex flex-col flex-1">
+              <div class="flex items-center text-sm text-slate-500 mb-4">
+                <time datetime={post.published_at}>
+                  {new Date(post.published_at).toLocaleDateString('en-US', {
+                    month: 'long',
+                    day: 'numeric',
+                    year: 'numeric'
+                  })}
+                </time>
+                <span class="mx-2">•</span>
+                <span>{post.author || 'Lamanify'}</span>
+              </div>
+              <h2 class="text-2xl font-bold text-slate-900 mb-4 line-clamp-2 group-hover:text-[#e9204f] transition-colors">
+                <a href={`/blog/${post.slug}`}>
+                  {post.title}
+                </a>
+              </h2>
+              <p class="text-slate-600 mb-6 line-clamp-3 leading-relaxed">
+                {post.excerpt}
+              </p>
+              <div class="mt-auto">
+                <a 
+                  href={`/blog/${post.slug}`}
+                  class="inline-flex items-center text-[#e9204f] font-semibold hover:gap-2 transition-all"
+                >
+                  Read Article
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    ) : (
+      <div class="text-center py-20 bg-slate-50 rounded-3xl border-2 border-dashed border-slate-200">
+        <p class="text-xl text-slate-500">More insights coming soon! Stay tuned.</p>
+      </div>
+    )}
+  </main>
+</Layout>
+
+<style>
+  /* Base styles handled by Tailwind, adding any custom micro-interactions here */
+</style>

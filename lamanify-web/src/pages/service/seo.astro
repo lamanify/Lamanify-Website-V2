@@ -1,0 +1,24 @@
+
+---
+import Layout from '../../layouts/Layout.astro';
+import { Hero } from '../../components/seo/Hero';
+import { Features } from '../../components/seo/Features';
+import { Guarantee } from '../../components/seo/Guarantee';
+// Start of Selection
+import { Pricing } from '../../components/seo/Pricing';
+import { Roadmap } from '../../components/seo/Roadmap';
+import { FAQ } from '../../components/seo/FAQ';
+---
+
+<Layout title="Healthcare SEO Services for Clinics in Malaysia | Lamanify">
+
+  <main>
+    <Hero client:load />
+    <Features client:visible />
+    <Guarantee client:visible />
+    <Pricing client:visible />
+    <Roadmap client:visible />
+    <FAQ client:visible />
+  </main>
+
+</Layout>

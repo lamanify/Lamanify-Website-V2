@@ -1,0 +1,41 @@
+
+---
+import Layout from '../../layouts/Layout.astro';
+import { Hero } from '../../components/landing-page/Hero';
+import { OneRatioRule } from '../../components/landing-page/OneRatioRule';
+import { SpeedSection } from '../../components/landing-page/SpeedSection';
+import { Pricing } from '../../components/landing-page/Pricing';
+import { ConversionFeatures } from '../../components/landing-page/ConversionFeatures';
+import { FAQ } from '../../components/landing-page/FAQ';
+import { ArrowRight } from 'lucide-react';
+---
+
+<Layout title="High-Converting Medical Landing Pages | Lamanify" description="High-converting, MOH-compliant campaign pages for healthcare practices in Malaysia. Engineered for speed and conversion.">
+
+    <main>
+        <Hero client:load />
+        <OneRatioRule client:visible />
+        <SpeedSection client:visible />
+        <Pricing client:visible />
+        <ConversionFeatures client:visible />
+        
+        {/* CTA Section */}
+        <section class="py-24 bg-brand relative overflow-hidden">
+             <div class="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10"></div>
+             <div class="container mx-auto px-4 sm:px-6 relative z-10 text-center">
+                <h2 class="text-3xl md:text-5xl font-black text-white mb-8 tracking-tight">
+                    Stop Wasting Your Ad Spend on a Maze.
+                </h2>
+                <p class="text-white/80 text-xl mb-12 max-w-2xl mx-auto">
+                    Get a dedicated campaign page that turns traffic into patients.
+                </p>
+                <a href="#booking" class="inline-flex items-center gap-2 bg-white text-brand font-bold py-4 px-8 rounded-full shadow-2xl hover:shadow-xl hover:scale-105 transition-all duration-300">
+                    Get Your Performance Audit <ArrowRight class="h-5 w-5" />
+                </a>
+             </div>
+        </section>
+
+        <FAQ client:visible />
+    </main>
+
+</Layout>

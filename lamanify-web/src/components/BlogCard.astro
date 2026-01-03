@@ -1,0 +1,51 @@
+---
+import { CldImage } from 'astro-cloudinary';
+
+interface Props {
+  publicId: string;
+  alt: string;
+  title: string;
+  excerpt: string;
+  href: string;
+}
+
+const { publicId, alt, title, excerpt, href } = Astro.props;
+---
+
+<a href={href} class="group block overflow-hidden rounded-xl bg-white shadow-sm hover:shadow-md transition-all duration-300 border border-slate-100 hover:border-brand/20">
+  <div class="aspect-video overflow-hidden bg-slate-100 relative">
+    {publicId ? (
+      <CldImage
+        src={publicId}
+        width="800"
+        height="600"
+        alt={alt}
+        crop={{
+          type: 'fill',
+          source: true
+        }}
+        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+        sizes="(max-width: 768px) 100vw, 50vw" 
+      />
+    ) : (
+      <div class="h-full w-full flex items-center justify-center bg-slate-100 text-slate-400">
+        No Image
+      </div>
+    )}
+  </div>
+  
+  <div class="p-6">
+    <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand transition-colors mb-2">
+      {title}
+    </h3>
+    <p class="text-slate-600 line-clamp-2">
+      {excerpt}
+    </p>
+    <div class="mt-4 flex items-center text-sm font-medium text-brand">
+      Read Article 
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </div>
+  </div>
+</a>

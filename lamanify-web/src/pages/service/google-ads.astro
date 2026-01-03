@@ -1,0 +1,25 @@
+
+---
+import Layout from '../../layouts/Layout.astro';
+import { Hero } from '../../components/google-ads/Hero';
+import { Features } from '../../components/google-ads/Features';
+import { Guarantee } from '../../components/google-ads/Guarantee';
+import { ROICalculator } from '../../components/google-ads/ROICalculator';
+import { Pricing } from '../../components/google-ads/Pricing';
+import { Roadmap } from '../../components/google-ads/Roadmap';
+import { FAQ } from '../../components/google-ads/FAQ';
+---
+
+<Layout title="Google Ads for Doctors & Clinics | Lamanify">
+
+  <main>
+    <Hero client:load />
+    <Features client:visible />
+    <Guarantee client:visible />
+    <ROICalculator client:visible />
+    <Pricing client:visible />
+    <Roadmap client:visible />
+    <FAQ client:visible />
+  </main>
+
+</Layout>

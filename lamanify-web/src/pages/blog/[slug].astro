@@ -1,0 +1,119 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { supabase } from '../../lib/supabase';
+
+// 1. getStaticPaths: Tells Astro which pages to build
+export async function getStaticPaths() {
+  const { data: posts } = await supabase
+    .from('blog_posts')
+    .select('slug')
+    .eq('published', true);
+
+  return posts?.map((post) => ({
+    params: { slug: post.slug },
+  })) || [];
+}
+
+const { slug } = Astro.params;
+
+// Fetch the full post data
+const { data: post, error } = await supabase
+  .from('blog_posts')
+  .select('*')
+  .eq('slug', slug)
+  .single();
+
+if (error || !post) {
+  return Astro.redirect('/404');
+}
+---
+
+<Layout 
+  title={post.seo_title || post.title} 
+  description={post.seo_description || post.excerpt}
+  image={post.og_image || post.featured_image}
+>
+  <main class="pt-32 pb-24">
+    <!-- Header/Hero Section -->
+    <header class="max-w-4xl mx-auto px-4 text-center mb-16">
+      <div class="mb-6">
+        <span class="px-4 py-1.5 text-sm font-bold bg-[#e9204f]/10 text-[#e9204f] rounded-full uppercase tracking-wider">
+          {post.category || 'Insights'}
+        </span>
+      </div>
+      <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 mb-8 leading-tight tracking-tight">
+        {post.title}
+      </h1>
+      <div class="flex items-center justify-center gap-4 text-slate-500 font-medium">
+        <div class="flex items-center gap-2">
+          <div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-[#e9204f] font-bold border border-slate-200">
+            {post.author?.[0] || 'L'}
+          </div>
+          <span class="text-slate-900">{post.author || 'Lamanify Team'}</span>
+        </div>
+        <span class="text-slate-300">|</span>
+        <time datetime={post.published_at}>
+           {new Date(post.published_at).toLocaleDateString('en-US', {
+            month: 'long',
+            day: 'numeric',
+            year: 'numeric'
+          })}
+        </time>
+      </div>
+    </header>
+
+    <!-- Featured Image -->
+    {post.featured_image && (
+      <div class="max-w-6xl mx-auto px-4 mb-20">
+        <div class="relative aspect-[21/9] rounded-3xl overflow-hidden shadow-2xl">
+          <img 
+            src={post.featured_image} 
+            alt={post.title}
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    )}
+
+    <!-- Content Section -->
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="prose prose-lg prose-slate max-w-none 
+        prose-headings:text-slate-900 prose-headings:font-bold prose-headings:tracking-tight
+        prose-h1:text-4xl prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6
+        prose-p:text-slate-600 prose-p:leading-relaxed prose-p:mb-6
+        prose-strong:text-slate-900
+        prose-a:text-[#e9204f] prose-a:no-underline hover:prose-a:underline
+        prose-blockquote:border-l-4 prose-blockquote:border-[#e9204f] prose-blockquote:bg-slate-50 prose-blockquote:py-2 prose-blockquote:px-6 prose-blockquote:rounded-r-xl prose-blockquote:italic
+        prose-img:rounded-2xl prose-img:shadow-lg"
+        set:html={post.content} 
+      />
+
+      <!-- Share/Footer Section -->
+      <footer class="mt-20 pt-10 border-t border-slate-100">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+          <div class="flex items-center gap-4">
+             <div class="w-12 h-12 rounded-full bg-gradient-to-br from-[#e9204f] to-pink-500 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-pink-200">
+              L
+            </div>
+            <div>
+              <p class="font-bold text-slate-900">About the Author</p>
+              <p class="text-slate-500 text-sm">Lamanify is a dedicated healthcare digital marketing agency specialized in patient growth.</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <a href="/blog" class="px-6 py-3 bg-slate-900 text-white rounded-xl font-bold hover:bg-[#e9204f] transition-colors shadow-lg shadow-slate-200">
+              Back to Insights
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+</Layout>
+
+<style is:global>
+  /* Custom prose tweaks */
+  .prose h2 {
+    scroll-margin-top: 100px;
+  }
+</style>

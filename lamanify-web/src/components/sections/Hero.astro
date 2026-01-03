@@ -1,0 +1,59 @@
+---
+import { Button } from '../ui/Button';
+import { HeroFunnel } from './HeroFunnel';
+import { Play } from 'lucide-react';
+---
+
+<section class="relative overflow-visible bg-slate-50 pt-32 pb-20 lg:pt-48 lg:pb-24">
+  <div class="container mx-auto px-4">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      
+      <!-- Left Column: Content -->
+      <div class="max-w-2xl relative z-20">
+        
+        <div class="inline-flex items-center rounded-full border border-red-100 bg-red-50/50 px-4 py-1.5 text-xs font-semibold tracking-wider text-slate-900 mb-8 uppercase shadow-sm">
+          MALAYSIA’S PREMIER HEALTHCARE GROWTH PARTNER
+        </div>
+
+        <h1 class="text-5xl font-extrabold tracking-tight text-slate-900 lg:text-7xl mb-6 leading-[1.1]">
+          Scale Your Medical Practice With Predictable Patient Volume.
+        </h1>
+
+        <p class="text-lg text-slate-600 mb-10 leading-relaxed max-w-lg">
+          We help private clinics and specialist centers drive consistent bookings and revenue through our KKLIU-compliant GrowthBooster Framework™. Stop guessing with your marketing—start engineering your growth.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center gap-6">
+          <Button client:load className="w-full sm:w-auto text-lg px-8 py-4 rounded-full bg-brand hover:bg-brand-dark shadow-lg shadow-brand/25 transition-all hover:scale-105 active:scale-95">
+            Get Your Growth Strategy →
+          </Button>
+          
+          <button class="group flex items-center font-semibold text-slate-700 hover:text-slate-900 transition-colors">
+            <div class="w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
+               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="text-slate-900 w-5 h-5 ml-1">
+                  <path d="M5 3l14 9-14 9V3z"/>
+               </svg>
+            </div>
+            See Our Results
+          </button>
+        </div>
+
+        <p class="mt-8 text-xs text-slate-400">
+          *Compatible with all major practice management software.
+        </p>
+      </div>
+
+      <!-- Right Column: Animated Funnel -->
+      <div class="relative h-[400px] md:h-[600px] lg:h-[800px] flex items-center justify-center w-full">
+         <HeroFunnel client:load />
+      </div>
+
+    </div>
+  </div>
+  
+  <!-- Background Elements -->
+  <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+    <div class="absolute top-[-20%] left-[-10%] w-[800px] h-[800px] bg-brand/5 rounded-full blur-[120px]"></div>
+    <div class="absolute bottom-[-10%] right-[-5%] w-[600px] h-[600px] bg-blue-500/5 rounded-full blur-[120px]"></div>
+  </div>
+</section>
