@@ -34,7 +34,7 @@ export const FAQ = () => {
             <div className="container mx-auto px-4">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">
-                        Common <span className="text-brand">Questions.</span>
+                        Common <span className="text-gradient">Questions</span>.
                     </h2>
                     <p className="text-xl text-slate-600">
                         Everything you need to know about partnering with Lamanify to grow your practice.

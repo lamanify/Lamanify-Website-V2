@@ -24,9 +24,9 @@ const results: ResultItem[] = [
     },
     {
         icon: Award,
-        title: 'Client Roster',
+        title: 'Portfolio',
         description: 'The clinics we partner with and the impact we have made.',
-        href: '/results/client-roster'
+        href: '/portfolio'
     },
     {
         icon: Calculator,
@@ -57,10 +57,10 @@ export default function ResultsMegaMenu({ className }: { className?: string }) {
                         className="flex gap-4 p-4 rounded-lg hover:bg-slate-50 transition-colors group"
                     >
                         <div className="mt-1">
-                            <item.icon className="w-5 h-5 text-slate-400 group-hover:text-brand transition-colors" />
+                            <item.icon className="w-5 h-5 text-slate-400 group-hover:text-brand group-active:text-brand transition-colors" />
                         </div>
                         <div>
-                            <h5 className="font-semibold text-slate-900 text-sm group-hover:text-brand transition-colors">
+                            <h5 className="font-semibold text-slate-900 text-sm group-hover:text-brand group-active:text-brand transition-colors">
                                 {item.title}
                             </h5>
                             <p className="text-slate-500 text-xs mt-1 leading-relaxed">

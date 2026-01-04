@@ -127,9 +127,9 @@ export default function ServicesMegaMenu({ className }: { className?: string }) 
                     <div className="grid grid-cols-2 gap-8">
                         {activeData.solutions.map((solution, idx) => (
                             <a key={idx} href={solution.href} className="flex gap-4 group">
-                                <solution.icon className="w-6 h-6 text-slate-400 group-hover:text-slate-600 mt-1 transition-colors" />
+                                <solution.icon className="w-6 h-6 text-slate-400 group-hover:text-brand group-active:text-brand mt-1 transition-colors" />
                                 <div>
-                                    <h5 className="font-semibold text-slate-900 text-lg group-hover:text-brand transition-colors">
+                                    <h5 className="font-semibold text-slate-900 text-lg group-hover:text-brand group-active:text-brand transition-colors">
                                         {solution.title}
                                     </h5>
                                     <p className="text-slate-500 text-sm mt-1">

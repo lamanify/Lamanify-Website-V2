@@ -1,0 +1,90 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AuditWizard from '../components/growth-audit/AuditWizard';
+import { ArrowLeft, CheckCircle2, Star } from 'lucide-react';
+---
+
+<Layout title="Growth Audit - Lamanify" description="Get your free 7-point clinic growth diagnosis.">
+  <main class="min-h-screen bg-slate-50 flex flex-col justify-center py-8 lg:py-16 px-4">
+    
+    {/* Constrained Container */}
+    <div class="max-w-6xl mx-auto w-full bg-white rounded-[2.5rem] overflow-hidden shadow-2xl flex flex-col lg:flex-row border border-slate-200/50">
+        
+        {/* Left Side: The Motivation (Grounded) */}
+        <div class="w-full lg:w-[45%] bg-[#F5F7FA] relative flex flex-col justify-center p-8 md:p-12 lg:p-16 border-b lg:border-b-0 lg:border-r border-slate-200/60">
+            <div class="relative z-10 max-w-md mx-auto lg:mx-0">
+                {/* Minimal Logo/Home Link */}
+                <a href="/" class="flex items-center gap-2 text-slate-400 hover:text-brand transition-colors text-sm font-bold mb-12 group">
+                    <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+                    Return to Lamanify
+                </a>
+
+                <div class="space-y-8">
+                    <h1 class="text-4xl lg:text-5xl font-extrabold text-slate-900 leading-[1.1] tracking-tight">
+                        See exactly why your <span class="text-brand">competitors</span> are ranking #1.
+                    </h1>
+                    <p class="text-lg text-slate-600 font-medium">
+                        Get a comprehensive digital health audit in under 60 seconds.
+                    </p>
+
+                    {/* Checklist */}
+                    <ul class="space-y-6 pt-2">
+                        {[
+                            { hook: "See who is stealing your traffic:", text: "Reveal exactly which competitors rank above you on Google Maps and why." },
+                            { hook: "Find your \"Revenue Leaks\":", text: "Identify the specific friction points causing patients to leave your site without booking." },
+                            { hook: "Get a Blueprint to #1:", text: "Receive a prioritized roadmap to dethrone your competitors and dominate your local area." }
+                        ].map((item) => (
+                            <li class="flex items-start gap-4 text-slate-600">
+                                <div class="flex-shrink-0 w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-0.5">
+                                    <CheckCircle2 className="w-4 h-4 text-green-600" />
+                                </div>
+                                <p class="leading-relaxed">
+                                    <strong class="text-slate-800 font-bold">{item.hook}</strong> {item.text}
+                                </p>
+                            </li>
+                        ))}
+                    </ul>
+
+                    {/* Social Proof */}
+                    <div class="pt-10 border-t border-slate-200">
+                        <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-6">Trusted Growth Partner</p>
+                        <div class="flex flex-col gap-4 border-l-2 border-brand/30 pl-6">
+                        <p class="text-slate-700 italic font-medium leading-relaxed">
+                            "Trusted by 100+ Healthcare Businesses including GP, Dentist, Physio, Aesthetics, Wellness and more."
+                        </p>
+                            <div class="flex items-center gap-1">
+                                {[1, 2, 3, 4, 5].map(() => <Star className="w-4 h-4 text-amber-400 fill-amber-400" />)}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* Right Side: The Action (Elevated with Grid) */}
+        <div class="w-full lg:w-[55%] flex flex-col justify-center p-6 md:p-12 lg:p-16 bg-white relative">
+            {/* Grid Pattern specifically on the right */}
+            <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(circle at center, #e9204f 1px, transparent 1px); background-size: 40px 40px; opacity: 0.04;"></div>
+            
+            <div class="w-full max-w-xl mx-auto relative z-10">
+                <AuditWizard client:load />
+
+                <div class="mt-12 text-center">
+                    <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold flex items-center justify-center gap-3">
+                        <span class="w-4 h-px bg-slate-200"></span>
+                        Lamanify Growth Engine™ • Healthcare Compliance Verified
+                        <span class="w-4 h-px bg-slate-200"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </main>
+</Layout>
+
+<style is:global>
+    /* Focus Mode: Hide main navigation and footer */
+    nav, footer {
+        display: none !important;
+    }
+</style>

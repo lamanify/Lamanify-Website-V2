@@ -21,7 +21,7 @@ export function Hero() {
                 </div>
 
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight text-slate-900 mb-6 max-w-5xl mx-auto leading-[1.1]">
-                    Healthcare Website Design for Clinics. <span className="bg-gradient-to-r from-brand to-brand-dark bg-clip-text text-transparent">Powered by AI SEO.</span>
+                    Healthcare Website Design for Clinics. <span className="text-gradient">Powered by AI SEO.</span>
                 </h1>
 
                 <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-3xl mx-auto">

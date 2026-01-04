@@ -56,10 +56,10 @@ export default function ResourcesMegaMenu({ className }: { className?: string })
                             className="flex gap-4 p-4 rounded-xl hover:bg-slate-50 transition-all group"
                         >
                             <div className="mt-1">
-                                <item.icon className="w-5 h-5 text-slate-400 group-hover:text-brand transition-colors" />
+                                <item.icon className="w-5 h-5 text-slate-400 group-hover:text-brand group-active:text-brand transition-colors" />
                             </div>
                             <div>
-                                <h5 className="font-semibold text-slate-900 text-sm group-hover:text-brand transition-colors">
+                                <h5 className="font-semibold text-slate-900 text-sm group-hover:text-brand group-active:text-brand transition-colors">
                                     {item.title}
                                 </h5>
                                 <p className="text-slate-500 text-xs mt-1 leading-relaxed">
@@ -72,7 +72,7 @@ export default function ResourcesMegaMenu({ className }: { className?: string })
             </div>
 
             <div className="bg-slate-50 p-4 border-t border-slate-100">
-                <a href="/blog" className="flex items-center justify-center gap-2 text-sm font-semibold text-slate-900 hover:text-brand transition-colors">
+                <a href="/blog" className="flex items-center justify-center gap-2 text-sm font-semibold text-slate-900 hover:text-brand active:text-brand transition-colors">
                     Browse all resources <ArrowRight className="w-4 h-4" />
                 </a>
             </div>

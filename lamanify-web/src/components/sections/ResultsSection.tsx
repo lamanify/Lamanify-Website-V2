@@ -49,7 +49,7 @@ export const ResultsSection = () => {
             <div className="container mx-auto px-4">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">
-                        Real Growth. <span className="text-brand">Verified Data.</span>
+                        Real Growth. <span className="text-gradient">Verified Data</span>.
                     </h2>
                     <p className="text-xl text-slate-600">
                         We don't hide behind "brand awareness." We measure our success by your patient volume and revenue growth.

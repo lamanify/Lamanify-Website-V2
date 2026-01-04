@@ -19,13 +19,13 @@ const modules: SystemModule[] = [
         icon: Cpu,
         title: 'The GrowthBooster Framework',
         description: 'Our core methodology explaining the "Recipe" for clinic success.',
-        href: '/the-system/growthbooster'
+        href: '/growthbooster-framework'
     },
     {
         icon: ShieldCheck,
         title: 'KKLIU Compliance Shield',
         description: 'Expertly navigating MOH guidelines to keep your ads compliant.',
-        href: '/the-system/kkliu-compliance'
+        href: '/kkliu-compliance-shield'
     },
     {
         icon: BarChart3,
@@ -51,10 +51,10 @@ export default function SystemMegaMenu({ className }: { className?: string }) {
                         className="flex gap-4 p-4 rounded-lg hover:bg-slate-50 transition-colors group"
                     >
                         <div className="mt-1">
-                            <item.icon className="w-6 h-6 text-slate-400 group-hover:text-brand transition-colors" />
+                            <item.icon className="w-6 h-6 text-slate-400 group-hover:text-brand group-active:text-brand transition-colors" />
                         </div>
                         <div>
-                            <h5 className="font-semibold text-slate-900 text-base group-hover:text-brand transition-colors">
+                            <h5 className="font-semibold text-slate-900 text-base group-hover:text-brand group-active:text-brand transition-colors">
                                 {item.title}
                             </h5>
                             <p className="text-slate-500 text-sm mt-0.5 leading-relaxed">

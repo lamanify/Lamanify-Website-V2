@@ -1,393 +1,380 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { Button } from '../../components/ui/Button';
-import { CheckCircle, Clock, TrendingUp, AlertTriangle, ShieldCheck, Database, Smartphone, Users } from 'lucide-react';
+import { CheckCircle, Clock, TrendingUp, AlertTriangle, ShieldCheck, Database, Smartphone, Users, ArrowRight } from 'lucide-react';
 
 const title = "Clinic Launch Solution - Launch With Momentum | Lamanify";
 const description = "Don't open to an empty waiting room. Lamanify's Clinic Launchpad™ helps new Malaysian clinics build a patient waiting list before construction is even finished.";
 ---
 
 <Layout title={title} description={description}>
-  <main class="overflow-hidden">
+  <main class="overflow-hidden bg-[#F9FAFB]">
     <!-- 1. Hero Section -->
-    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-slate-50 overflow-hidden">
-      <div class="absolute inset-0 z-0 opacity-40">
-        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
-      </div>
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-white border-b border-[#E5E7EB] overflow-hidden">
+        <!-- Minimal Grid Background -->
+        <div class="absolute inset-0 z-0 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
 
       <div class="container mx-auto px-4 relative z-10">
-        <div class="max-w-4xl mx-auto text-center">
-          <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary font-semibold text-sm mb-6 fade-up">
-            NEW CLINIC GO-TO-MARKET STRATEGY
-          </span>
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight mb-6 fade-up" style="animation-delay: 100ms;">
+        <div class="max-w-5xl mx-auto text-center">
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FAFAFA] border border-[#E5E7EB] text-[#737373] text-xs font-semibold uppercase tracking-widest mb-8 fade-up shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                Go-To-Market Protocol
+            </span>
+
+          <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-[#0a0a0a] tracking-[-0.03em] leading-[1.1] mb-8 fade-up" style="animation-delay: 100ms;">
              Don’t Open to an Empty Waiting Room. <br class="hidden md:block" />
-             <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Launch With Momentum.</span>
+             <span class="text-transparent bg-clip-text bg-gradient-to-br from-[#e9204f] to-[#8a0f2b]">Launch With Momentum.</span>
           </h1>
-          <p class="text-lg md:text-xl text-slate-600 mb-8 max-w-2xl mx-auto fade-up" style="animation-delay: 200ms;">
+          
+          <p class="text-lg md:text-xl text-[#404040] mb-10 max-w-2xl mx-auto leading-relaxed fade-up" style="animation-delay: 200ms;">
             We help new Malaysian clinics build a patient waiting list <em>before</em> construction is even finished. Secure your cash flow from Day 1 with our proven <strong>Clinic Launchpad™</strong> system.
           </p>
+
           <div class="flex flex-col sm:flex-row gap-4 justify-center items-center fade-up" style="animation-delay: 300ms;">
-            <Button client:load href="#timeline" variant="primary" size="lg">
-              Get Your Launch Timeline →
+            <Button client:load href="#timeline" variant="primary" size="lg" className="shadow-[0px_4px_14px_0px_rgba(233,32,79,0.35)] rounded-lg">
+              Get Your Launch Timeline
             </Button>
-            <p class="text-sm text-slate-500 italic mt-2 sm:mt-0">
+             <a href="/portfolio" class="px-6 py-3 rounded-lg border border-[#E5E7EB] bg-white text-[#0a0a0a] font-medium hover:border-primary transition-colors text-[0.95rem]">
+                View Success Stories
+            </a>
+          </div>
+           <p class="text-xs text-[#737373] mt-6 fade-up" style="animation-delay: 350ms;">
               Ideal for clinics opening in the next 30-90 days.
             </p>
-          </div>
         </div>
 
-        <!-- Visual Representation -->
-        <div class="mt-16 relative mx-auto max-w-5xl fade-up" style="animation-delay: 400ms;">
-            <div class="bg-white rounded-2xl shadow-xl border border-slate-200 p-4 md:p-8">
-                <!-- Simple Launch Timeline SVG/Graphic Representation -->
-                <div class="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-0 relative">
-                    <!-- Line connecting nodes (desktop) -->
-                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-slate-200 via-primary to-green-500 -z-10 rounded-full transform -translate-y-1/2"></div>
-
-                    <!-- Step 1 -->
-                    <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm text-center w-full md:w-1/3 relative">
-                        <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-3 text-slate-500 font-bold border-4 border-white">1</div>
-                        <h3 class="font-bold text-slate-900">Renovation</h3>
-                        <p class="text-xs text-slate-500">Construction & Licensing</p>
-                    </div>
-
-                    <!-- Step 2 -->
-                    <div class="bg-white p-4 rounded-xl border border-primary/20 shadow-md text-center w-full md:w-1/3 relative transform md:-translate-y-4 scale-105 z-10">
-                        <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Crucial Phase</div>
-                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3 text-primary font-bold border-4 border-white">2</div>
-                        <h3 class="font-bold text-slate-900">Pre-Launch Marketing</h3>
-                        <p class="text-xs text-slate-500">Waitlist Generation</p>
-                    </div>
-
-                    <!-- Step 3 -->
-                    <div class="bg-white p-4 rounded-xl border border-green-100 shadow-sm text-center w-full md:w-1/3 relative">
-                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3 text-green-600 font-bold border-4 border-white">3</div>
-                        <h3 class="font-bold text-slate-900">Grand Opening</h3>
-                        <p class="text-xs text-slate-500">Full Bookings & Cash Flow</p>
-                    </div>
+        <!-- Visual Representation: Dashboard Style -->
+        <div class="mt-20 relative mx-auto max-w-5xl fade-up" style="animation-delay: 400ms;">
+            <div class="bg-white rounded-2xl shadow-2xl border border-[#E5E7EB] p-2 md:p-4 relative">
+                <!-- Browser Bar Mockup -->
+                <div class="h-8 bg-[#F9FAFB] border-b border-[#E5E7EB] rounded-t-xl flex items-center px-4 gap-2 mb-4">
+                    <div class="w-3 h-3 rounded-full bg-[#E5E7EB]"></div>
+                    <div class="w-3 h-3 rounded-full bg-[#E5E7EB]"></div>
+                    <div class="w-3 h-3 rounded-full bg-[#E5E7EB]"></div>
                 </div>
-                 <!-- Graph Representation -->
-                 <div class="mt-8 border-t border-slate-100 pt-6">
-                    <div class="flex items-end justify-between h-32 gap-2">
-                        <div class="w-1/4 bg-slate-200 h-8 rounded-t-md relative group">
-                            <span class="absolute bottom-full left-1/2 -translate-x-1/2 mb-1 text-[10px] text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity">Typical Launch</span>
+
+                <div class="grid md:grid-cols-3 gap-6 p-4 md:p-8">
+                     <!-- Metric Card 1 -->
+                     <div class="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm flex flex-col items-center text-center">
+                        <span class="text-xs text-[#737373] uppercase tracking-wider font-semibold mb-2">Pre-Launch Leads</span>
+                        <div class="text-4xl font-bold text-[#0a0a0a] tracking-tight mb-1">
+                            248
                         </div>
-                        <div class="w-1/4 bg-slate-300 h-10 rounded-t-md"></div>
-                        <div class="w-1/4 bg-slate-300 h-12 rounded-t-md"></div>
-                        <div class="w-1/4 bg-gradient-to-t from-primary to-secondary h-full rounded-t-md relative flex items-center justify-center">
-                            <span class="text-white font-bold text-sm tracking-wide transform -rotate-90 md:rotate-0">EXPLOSIVE GROWTH</span>
+                        <div class="flex items-center text-green-600 text-xs font-medium bg-green-50 px-2 py-1 rounded-full">
+                            <TrendingUp size={12} class="mr-1" /> +120% vs Avg
                         </div>
-                    </div>
-                    <p class="text-center text-xs text-slate-400 mt-2">Patient Volume Projection</p>
-                 </div>
-            </div>
-        </div>
-      </div>
-    </section>
+                     </div>
 
-    <!-- 2. The Problem: "The Silent Opening" -->
-    <section class="py-20 bg-white">
-      <div class="container mx-auto px-4">
-        <div class="max-w-3xl mx-auto text-center mb-12 fade-up">
-            <h2 class="text-3xl font-bold text-slate-900 mb-4">The Most Dangerous Month is Month 1.</h2>
-            <p class="text-lg text-slate-600">
-                You have spent hundreds of thousands on renovation, medical equipment, and licensing (Borang A/B). 
-                The meter is running on your overheads. But when the roller shutter finally goes up... 
-                <strong class="text-slate-900">will anyone walk in?</strong>
-            </p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <!-- Problem 1 -->
-            <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 hover:shadow-md transition-shadow fade-up">
-                <div class="w-12 h-12 bg-red-100 text-red-600 rounded-lg flex items-center justify-center mb-4">
-                    <AlertTriangle size={24} />
-                </div>
-                <h3 class="text-xl font-bold text-slate-900 mb-2">The "Hope" Strategy</h3>
-                <p class="text-slate-600">Relying on buntings and "friends & family" is not a business plan. It's a recipe for slow growth.</p>
-            </div>
-
-            <!-- Problem 2 -->
-            <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 hover:shadow-md transition-shadow fade-up" style="animation-delay: 100ms;">
-                <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center mb-4">
-                    <Clock size={24} />
-                </div>
-                <h3 class="text-xl font-bold text-slate-900 mb-2">The Google Lag</h3>
-                <p class="text-slate-600">If you wait until you open to start marketing, Google Maps won't rank you for months. You are invisible.</p>
-            </div>
-
-            <!-- Problem 3 -->
-            <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 hover:shadow-md transition-shadow fade-up" style="animation-delay: 200ms;">
-                <div class="w-12 h-12 bg-slate-200 text-slate-700 rounded-lg flex items-center justify-center mb-4">
-                    <TrendingUp size={24} />
-                </div>
-                <h3 class="text-xl font-bold text-slate-900 mb-2">The Cash Burn</h3>
-                <p class="text-slate-600">Every day with an empty chair is cash burned from your reserves. You need revenue immediately.</p>
-            </div>
-        </div>
-
-        <div class="mt-12 text-center fade-up">
-            <p class="text-xl font-medium text-slate-900">
-                The Reality: You need a <span class="bg-primary/20 px-2 py-0.5 rounded text-primary">Pre-Launch Strategy</span> that generates demand <em>while</em> you are still renovating.
-            </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. The Solution: "Clinic Launchpad™" Protocol -->
-    <section id="timeline" class="py-20 bg-slate-900 text-white relative overflow-hidden">
-        <!-- Background Elements -->
-        <div class="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-        
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="text-center mb-16 fade-up">
-                <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Our Methodology</span>
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">A Structured Countdown to Profitability.</h2>
-                <p class="text-slate-400 max-w-2xl mx-auto">
-                    We break the launch down into a precise timeline so you can focus on the clinic while we focus on the patients.
-                </p>
-            </div>
-
-            <div class="max-w-4xl mx-auto space-y-12">
-                <!-- Phase 1 -->
-                <div class="flex flex-col md:flex-row gap-8 items-start fade-up">
-                    <div class="flex-shrink-0 flex items-center justify-center w-16 h-16 rounded-full bg-slate-800 border-2 border-slate-700 text-2xl font-bold text-slate-400">
-                        1
-                    </div>
-                    <div>
-                        <div class="flex flex-col sm:flex-row sm:items-center gap-2 mb-3">
-                            <h3 class="text-2xl font-bold text-white">The Foundation</h3>
-                            <span class="inline-block px-3 py-1 bg-slate-800 rounded-full text-xs font-semibold text-slate-400 border border-slate-700">T-Minus 8 Weeks</span>
+                     <!-- Metric Card 2 -->
+                     <div class="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm flex flex-col items-center text-center relative overflow-hidden group">
+                         <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-[#8a0f2b]"></div>
+                        <span class="text-xs text-[#737373] uppercase tracking-wider font-semibold mb-2">Day 1 Bookings</span>
+                        <div class="text-4xl font-bold text-primary tracking-tight mb-1 group-hover:scale-110 transition-transform duration-300">
+                           Full
                         </div>
-                        <p class="text-slate-300 italic mb-4">While the contractors are drilling, we are building.</p>
-                        <ul class="space-y-3">
-                            <li class="flex items-start gap-3">
-                                <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                                <span class="text-slate-300"><strong>Digital Real Estate:</strong> We secure your domain and build a high-conversion "Waitlist" landing page.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                                <span class="text-slate-300"><strong>Google Map Verification:</strong> We initiate the Google Business Profile verification early so you appear on Maps on Day 1.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                                <span class="text-slate-300"><strong>Brand Identity:</strong> Logo refinement and color palettes that stand out in your local area.</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- connector line -->
-                <div class="hidden md:block w-0.5 h-12 bg-slate-800 ml-8 -my-6"></div>
-
-                <!-- Phase 2 -->
-                <div class="flex flex-col md:flex-row gap-8 items-start fade-up">
-                    <div class="flex-shrink-0 flex items-center justify-center w-16 h-16 rounded-full bg-primary/20 border-2 border-primary text-2xl font-bold text-primary shadow-[0_0_15px_rgba(233,32,79,0.5)]">
-                        2
-                    </div>
-                    <div>
-                        <div class="flex flex-col sm:flex-row sm:items-center gap-2 mb-3">
-                            <h3 class="text-2xl font-bold text-white">The Hype</h3>
-                            <span class="inline-block px-3 py-1 bg-primary/20 rounded-full text-xs font-semibold text-primary border border-primary/30">T-Minus 4 Weeks</span>
+                         <div class="flex items-center text-[#737373] text-xs">
+                           Capacity Reached
                         </div>
-                        <p class="text-slate-300 italic mb-4">Building the "buzz" in the neighborhood.</p>
-                        <ul class="space-y-3">
-                            <li class="flex items-start gap-3">
-                                <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                                <span class="text-slate-300"><strong>"Coming Soon" Campaigns:</strong> Geo-targeted ads (1-3km radius) introducing the doctor and clinic.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                                <span class="text-slate-300"><strong>The Irresistible Offer:</strong> Crafting a compliant "Founding Patient" offer to capture leads early.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                                <span class="text-slate-300"><strong>Database Building:</strong> Collecting names and phone numbers of interested residents.</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                     </div>
 
-                 <!-- connector line -->
-                 <div class="hidden md:block w-0.5 h-12 bg-slate-800 ml-8 -my-6"></div>
-
-                <!-- Phase 3 -->
-                <div class="flex flex-col md:flex-row gap-8 items-start fade-up">
-                    <div class="flex-shrink-0 flex items-center justify-center w-16 h-16 rounded-full bg-green-500/20 border-2 border-green-500 text-2xl font-bold text-green-500">
-                        3
-                    </div>
-                    <div>
-                        <div class="flex flex-col sm:flex-row sm:items-center gap-2 mb-3">
-                            <h3 class="text-2xl font-bold text-white">The Grand Opening</h3>
-                            <span class="inline-block px-3 py-1 bg-green-900/40 rounded-full text-xs font-semibold text-green-400 border border-green-700/50">Day 0</span>
+                     <!-- Metric Card 3 -->
+                     <div class="bg-white border border-[#E5E7EB] rounded-2xl p-6 shadow-sm flex flex-col items-center text-center">
+                        <span class="text-xs text-[#737373] uppercase tracking-wider font-semibold mb-2">Breakeven Speed</span>
+                        <div class="text-4xl font-bold text-[#0a0a0a] tracking-tight mb-1">
+                            2 Mo
                         </div>
-                        <p class="text-slate-300 italic mb-4">The doors open. The phone rings.</p>
-                        <ul class="space-y-3">
-                            <li class="flex items-start gap-3">
-                                <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                                <span class="text-slate-300"><strong>Launch Blitz:</strong> Aggressive "Open Now" ads on Google and Waze.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                                <span class="text-slate-300"><strong>Reputation Sprint:</strong> Capturing your first 50 Google Reviews in 30 days (crucial for long-term ranking).</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                                <span class="text-slate-300"><strong>Patient Activation:</strong> Blasting your collected database via WhatsApp to fill the first week's slots.</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. Compliance -->
-    <section class="py-20 bg-slate-50 border-b border-slate-200">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center gap-12 max-w-6xl mx-auto">
-                <div class="w-full md:w-1/2 fade-up">
-                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100">
-                        <ShieldCheck className="w-16 h-16 text-primary mb-6" />
-                        <h2 class="text-3xl font-bold text-slate-900 mb-4">Protect Your New License.</h2>
-                        <p class="text-slate-600 mb-6">
-                            The last thing a new clinic needs is a warning letter from the Ministry of Health. We operate strictly within guidelines.
-                        </p>
-                        <ul class="space-y-4">
-                            <li class="flex items-start gap-3">
-                                <div class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <CheckCircle size={14} className="text-green-600" />
-                                </div>
-                                <div>
-                                    <strong class="text-slate-900 block">Borang F Guidance</strong>
-                                    <span class="text-sm text-slate-600">We understand signboard and advertisement regulations.</span>
-                                </div>
-                            </li>
-                             <li class="flex items-start gap-3">
-                                <div class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <CheckCircle size={14} className="text-green-600" />
-                                </div>
-                                <div>
-                                    <strong class="text-slate-900 block">Digital Compliance</strong>
-                                    <span class="text-sm text-slate-600">Ensuring "Opening Offers" do not violate KKLIU pricing rules.</span>
-                                </div>
-                            </li>
-                             <li class="flex items-start gap-3">
-                                <div class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <CheckCircle size={14} className="text-green-600" />
-                                </div>
-                                <div>
-                                    <strong class="text-slate-900 block">Safe Growth</strong>
-                                    <span class="text-sm text-slate-600">Building brand authority without over-claiming.</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="w-full md:w-1/2 fade-up" style="animation-delay: 200ms;">
-                     <div class="prose prose-lg text-slate-600">
-                        <p>
-                            Starting a new practice is risky enough without regulatory headaches. 
-                            Many agencies don't understand the difference between selling t-shirts and selling healthcare.
-                        </p>
-                        <p>
-                            We act as your safeguard, ensuring that your aggressive growth strategy remains 100% compliant with KKM and MMC guidelines.
-                        </p>
+                        <div class="flex items-center text-green-600 text-xs font-medium bg-green-50 px-2 py-1 rounded-full">
+                             Industry Record
+                        </div>
                      </div>
                 </div>
             </div>
+             <!-- Decorative Elements behind -->
+            <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+            <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl -z-10"></div>
         </div>
+      </div>
     </section>
 
-    <!-- 5. Tech Stack -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-4 text-center">
-            <div class="max-w-3xl mx-auto mb-16 fade-up">
-                <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Foundational Tech</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Built for the Future.</h2>
-                <p class="text-lg text-slate-600">
-                    Don't start with messy spreadsheets. We set up your digital infrastructure correctly from the start.
+    <!-- 2. The Problem: Bento Grid -->
+    <section class="py-24 bg-[#F9FAFB]">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-left mb-16 fade-up">
+            <h2 class="text-4xl font-bold text-[#0a0a0a] tracking-[-0.02em] mb-6">The Most Dangerous Month is Month 1.</h2>
+            <p class="text-lg text-[#404040] leading-relaxed">
+                You have spent hundreds of thousands on renovation and licensing. The meter is running on your overheads. But when you open, <strong class="text-[#0a0a0a]">will anyone identify you in the noise?</strong>
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <!-- Problem 1 -->
+            <div class="bg-white p-8 rounded-2xl border border-[#E5E7EB] shadow-sm hover:-translate-y-1 hover:shadow-lg hover:border-[#ffe4e9] transition-all duration-300 fade-up group">
+                <div class="w-12 h-12 bg-red-50 text-red-600 rounded-xl flex items-center justify-center mb-6 border border-red-100 group-hover:bg-red-600 group-hover:text-white transition-colors">
+                    <AlertTriangle size={24} />
+                </div>
+                <h3 class="text-xl font-medium text-[#0a0a0a] tracking-[-0.01em] mb-3">The "Hope" Strategy</h3>
+                <p class="text-[#737373] text-sm leading-relaxed">Relying on buntings and "friends & family" is not a business plan. It's a recipe for dangerously slow growth and cash flow gaps.</p>
+            </div>
+
+            <!-- Problem 2 -->
+            <div class="bg-white p-8 rounded-2xl border border-[#E5E7EB] shadow-sm hover:-translate-y-1 hover:shadow-lg hover:border-[#ffe4e9] transition-all duration-300 fade-up group" style="animation-delay: 100ms;">
+                <div class="w-12 h-12 bg-orange-50 text-orange-600 rounded-xl flex items-center justify-center mb-6 border border-orange-100 group-hover:bg-orange-600 group-hover:text-white transition-colors">
+                    <Clock size={24} />
+                </div>
+                <h3 class="text-xl font-medium text-[#0a0a0a] tracking-[-0.01em] mb-3">The Google Lag</h3>
+                <p class="text-[#737373] text-sm leading-relaxed">If you wait until you open to start marketing, Google Maps won't rank you for months. You remain invisible to local searchers.</p>
+            </div>
+
+            <!-- Problem 3 -->
+            <div class="bg-white p-8 rounded-2xl border border-[#E5E7EB] shadow-sm hover:-translate-y-1 hover:shadow-lg hover:border-[#ffe4e9] transition-all duration-300 fade-up group" style="animation-delay: 200ms;">
+                <div class="w-12 h-12 bg-slate-50 text-slate-900 rounded-xl flex items-center justify-center mb-6 border border-slate-100 group-hover:bg-slate-900 group-hover:text-white transition-colors">
+                    <TrendingUp size={24} />
+                </div>
+                <h3 class="text-xl font-medium text-[#0a0a0a] tracking-[-0.01em] mb-3">The Cash Burn</h3>
+                <p class="text-[#737373] text-sm leading-relaxed">Every day with an empty chair is cash burned from your reserves. You need patient revenue immediately upon opening.</p>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. The Solution: Structured Timeline -->
+    <section id="timeline" class="py-24 bg-white border-y border-[#E5E7EB]">
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-20 fade-up">
+                <span class="text-primary font-bold tracking-widest uppercase text-xs mb-3 block">Methodology</span>
+                <h2 class="text-4xl font-bold text-[#0a0a0a] tracking-[-0.02em] mb-4">Launchpad™ Protocol</h2>
+                <p class="text-[#737373] max-w-2xl mx-auto">
+                    We break the launch down into a precise T-Minus timeline.
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <div class="p-6 rounded-xl bg-slate-50 border border-slate-100 text-left fade-up group hover:bg-white hover:shadow-lg transition-all duration-300">
-                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                        <Smartphone size={24} />
+            <div class="max-w-5xl mx-auto relative">
+                <!-- Vertical Line for Mobile -->
+                <div class="absolute left-8 top-0 bottom-0 w-px bg-[#E5E7EB] md:hidden"></div>
+
+                <!-- Phase 1 -->
+                <div class="relative pl-20 md:pl-0 mb-16 md:mb-0 md:group">
+                    <div class="md:flex items-center justify-between gap-12 group-hover:opacity-100 transition-opacity">
+                         <!-- Content Left (Desktop) -->
+                        <div class="md:w-[45%] md:text-right fade-up order-1">
+                             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-slate-600 text-xs font-bold uppercase tracking-wider mb-4">
+                                T-Minus 8 Weeks
+                             </div>
+                             <h3 class="text-2xl font-bold text-[#0a0a0a] mb-3">The Foundation</h3>
+                             <p class="text-[#737373] mb-6 text-sm">While contractors are drilling, we are building your digital footprint.</p>
+                             <ul class="md:flex md:flex-col md:items-end space-y-2">
+                                <li class="text-sm text-[#404040]">Digital Real Estate Acquisition</li>
+                                <li class="text-sm text-[#404040]">Google Verification Initiation</li>
+                                <li class="text-sm text-[#404040]">Brand Identity System</li>
+                             </ul>
+                        </div>
+
+                         <!-- Center Node -->
+                        <div class="absolute left-2 md:left-1/2 md:-translate-x-1/2 top-0 md:top-auto w-12 h-12 bg-white border-4 border-[#E5E7EB] rounded-full flex items-center justify-center z-10 order-2 md:group-hover:border-primary md:group-hover:scale-110 transition-all duration-300">
+                            <span class="font-bold text-[#0a0a0a] text-sm">01</span>
+                        </div>
+
+                        <!-- Empty Right (Desktop) -->
+                        <div class="hidden md:block md:w-[45%] order-3"></div>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">Conversion-Ready Website</h3>
-                    <p class="text-slate-600 text-sm">Mobile-fast, SEO-structured, and designed to convert visitors into patients immediately.</p>
                 </div>
 
-                <div class="p-6 rounded-xl bg-slate-50 border border-slate-100 text-left fade-up group hover:bg-white hover:shadow-lg transition-all duration-300" style="animation-delay: 100ms;">
-                    <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                        <Database size={24} />
+                <!-- Connector Line (Desktop) -->
+                <div class="hidden md:block absolute left-1/2 -translate-x-1/2 top-12 h-24 w-px bg-[#E5E7EB]"></div>
+
+                 <!-- Phase 2 -->
+                <div class="relative pl-20 md:pl-0 mb-16 md:mb-0 md:mt-16 md:group">
+                    <div class="md:flex items-center justify-between gap-12">
+                         <!-- Empty Left (Desktop) -->
+                        <div class="hidden md:block md:w-[45%] order-1"></div>
+
+                         <!-- Center Node -->
+                        <div class="absolute left-2 md:left-1/2 md:-translate-x-1/2 top-0 md:top-auto w-12 h-12 bg-primary text-white border-4 border-white shadow-[0_4px_14px_rgba(233,32,79,0.4)] rounded-full flex items-center justify-center z-10 order-2 scale-110">
+                            <span class="font-bold text-sm">02</span>
+                        </div>
+
+                        <!-- Content Right (Desktop) -->
+                        <div class="md:w-[45%] fade-up order-3">
+                             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wider mb-4">
+                                T-Minus 4 Weeks
+                             </div>
+                             <h3 class="text-2xl font-bold text-[#0a0a0a] mb-3">The Hype</h3>
+                             <p class="text-[#737373] mb-6 text-sm">Building the "buzz" in the neighborhood before you open.</p>
+                             <ul class="space-y-2">
+                                <li class="text-sm text-[#404040] flex items-center gap-2">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-primary"></div> Geo-targeted "Coming Soon" Ads
+                                </li>
+                                <li class="text-sm text-[#404040] flex items-center gap-2">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-primary"></div> Founding Patient Offers
+                                </li>
+                                <li class="text-sm text-[#404040] flex items-center gap-2">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-primary"></div> Waitlist Database Building
+                                </li>
+                             </ul>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">Analytics Setup</h3>
-                    <p class="text-slate-600 text-sm">GA4 and Pixel tracking installed <em>before</em> you spend money, so you know exactly what's working.</p>
                 </div>
 
-                <div class="p-6 rounded-xl bg-slate-50 border border-slate-100 text-left fade-up group hover:bg-white hover:shadow-lg transition-all duration-300" style="animation-delay: 200ms;">
-                    <div class="w-12 h-12 bg-pink-100 text-pink-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                        <Users size={24} />
+                 <!-- Connector Line (Desktop) -->
+                 <div class="hidden md:block absolute left-1/2 -translate-x-1/2 top-[calc(11rem+3rem)] h-24 w-px bg-[#E5E7EB]"></div>
+
+                 <!-- Phase 3 -->
+                 <div class="relative pl-20 md:pl-0 md:mt-16 md:group">
+                    <div class="md:flex items-center justify-between gap-12">
+                         <!-- Content Left (Desktop) -->
+                        <div class="md:w-[45%] md:text-right fade-up order-1">
+                             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-50 border border-green-200 text-green-700 text-xs font-bold uppercase tracking-wider mb-4">
+                                Day 0
+                             </div>
+                             <h3 class="text-2xl font-bold text-[#0a0a0a] mb-3">Grand Opening</h3>
+                             <p class="text-[#737373] mb-6 text-sm">The doors open. The phone rings. Revenue flows.</p>
+                             <ul class="md:flex md:flex-col md:items-end space-y-2">
+                                <li class="text-sm text-[#404040]">Launch Blitz Ads</li>
+                                <li class="text-sm text-[#404040]">Reputation Sprint (50 Reviews)</li>
+                                <li class="text-sm text-[#404040]">Database Activation Blasts</li>
+                             </ul>
+                        </div>
+
+                         <!-- Center Node -->
+                        <div class="absolute left-2 md:left-1/2 md:-translate-x-1/2 top-0 md:top-auto w-12 h-12 bg-white border-4 border-[#E5E7EB] rounded-full flex items-center justify-center z-10 order-2 md:group-hover:border-green-500 transition-colors duration-300">
+                            <span class="font-bold text-[#0a0a0a] text-sm">03</span>
+                        </div>
+
+                        <!-- Empty Right (Desktop) -->
+                        <div class="hidden md:block md:w-[45%] order-3"></div>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">CRM Integration</h3>
-                    <p class="text-slate-600 text-sm">Connecting leads to your clinic management software (where possible) or our proprietary Agency OS.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Compliance Bento -->
+    <section class="py-24 bg-[#F9FAFB]">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-12 max-w-6xl mx-auto">
+                <div class="w-full md:w-1/2 fade-up">
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-[#E5E7EB]">
+                        <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6">
+                            <ShieldCheck size={24} />
+                        </div>
+                        <h2 class="text-3xl font-bold text-[#0a0a0a] tracking-[-0.02em] mb-4">Protect Your New License.</h2>
+                        <p class="text-[#404040] mb-8 leading-relaxed">
+                            The last thing a new clinic needs is a warning letter from the Ministry of Health. We operate strictly within guidelines, creating aggressive growth without regulatory risk.
+                        </p>
+                        
+                        <div class="space-y-4">
+                             <div class="flex items-start gap-4 p-4 rounded-xl bg-[#F9FAFB] border border-[#E5E7EB]">
+                                <CheckCircle size={20} className="text-green-600 mt-1 shrink-0" />
+                                <div>
+                                    <h4 class="font-semibold text-[#0a0a0a] text-sm">Borang F & Signage</h4>
+                                    <p class="text-xs text-[#737373] mt-1">Guidance on compliant physical and digital advertisements.</p>
+                                </div>
+                             </div>
+                             <div class="flex items-start gap-4 p-4 rounded-xl bg-[#F9FAFB] border border-[#E5E7EB]">
+                                <CheckCircle size={20} className="text-green-600 mt-1 shrink-0" />
+                                <div>
+                                    <h4 class="font-semibold text-[#0a0a0a] text-sm">KKLIU Pricing Rules</h4>
+                                    <p class="text-xs text-[#737373] mt-1">Structuring "Opening Offers" to be effective yet compliant.</p>
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="w-full md:w-1/2 fade-up" style="animation-delay: 200ms;">
+                     <h3 class="text-xl font-bold text-[#0a0a0a] mb-4">Why This Matters</h3>
+                     <p class="text-[#737373] mb-6 leading-relaxed">
+                        Starting a new practice is risky enough without regulatory headaches. Many generalist agencies don't understand the difference between selling t-shirts and selling medical services.
+                     </p>
+                     <p class="text-[#737373] leading-relaxed">
+                        We act as your safeguard. We know what words to avoid, what images to use, and how to position your launch to be authoritative and professional.
+                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 6. Case Study -->
-    <section class="py-20 bg-slate-900 text-white">
-        <div class="container mx-auto px-4">
-            <div class="max-w-5xl mx-auto bg-slate-800 rounded-2xl p-8 md:p-12 border border-slate-700 fade-up">
-                <div class="flex flex-col md:flex-row gap-8">
-                    <div class="w-full md:w-2/3">
-                        <span class="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full mb-4 inline-block">CASE STUDY</span>
-                        <h3 class="text-3xl font-bold mb-6">Breakeven in Month 2.</h3>
-                        
-                        <div class="space-y-4 text-slate-300">
-                             <div class="flex gap-4">
-                                <span class="font-bold text-white min-w-[80px]">Client:</span>
-                                <span>[Name] Dental Surgery (Subang Jaya)</span>
-                             </div>
-                             <div class="flex gap-4">
-                                <span class="font-bold text-white min-w-[80px]">Challenge:</span>
-                                <span>Opening in a saturated row of shop lots with 3 other dentists nearby.</span>
-                             </div>
-                             <div class="flex gap-4">
-                                <span class="font-bold text-white min-w-[80px]">Strategy:</span>
-                                <span>Lamanify executed a "Pre-Launch Digital Blitz" 6 weeks before opening. We promoted a "Whitening & Scaling" launch package.</span>
-                             </div>
-                        </div>
+    <!-- 5. Tech Stack Bento -->
+    <section class="py-24 bg-white border-t border-[#E5E7EB]">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-3xl mx-auto mb-16 fade-up">
+                <span class="text-primary font-bold tracking-widest uppercase text-xs mb-3 block">Infrastructure</span>
+                <h2 class="text-4xl font-bold text-[#0a0a0a] tracking-[-0.02em] mb-6">Built for the Future.</h2>
+                <p class="text-lg text-[#737373]">
+                    Don't start with messy spreadsheets. We set up your digital infrastructure correctly from Day 1.
+                </p>
+            </div>
 
-                        <div class="mt-8 grid grid-cols-2 gap-4">
-                            <div class="bg-slate-700/50 p-4 rounded-lg">
-                                <div class="text-2xl font-bold text-primary mb-1">250+</div>
-                                <div class="text-xs text-slate-400">Pre-Launch Leads</div>
+            <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <div class="p-8 rounded-2xl bg-white border border-[#E5E7EB] text-left fade-up hover:border-primary/50 transition-colors duration-300">
+                    <div class="w-10 h-10 bg-slate-50 border border-slate-100 rounded-lg flex items-center justify-center mb-6 text-slate-700">
+                        <Smartphone size={20} />
+                    </div>
+                    <h3 class="text-lg font-bold text-[#0a0a0a] mb-2">Conversion Website</h3>
+                    <p class="text-[#737373] text-sm leading-relaxed">Mobile-fast, SEO-structured, and specifically designed to convert visitors into booked appointments.</p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-white border border-[#E5E7EB] text-left fade-up hover:border-primary/50 transition-colors duration-300" style="animation-delay: 100ms;">
+                    <div class="w-10 h-10 bg-slate-50 border border-slate-100 rounded-lg flex items-center justify-center mb-6 text-slate-700">
+                        <Database size={20} />
+                    </div>
+                    <h3 class="text-lg font-bold text-[#0a0a0a] mb-2">Analytics Matrix</h3>
+                    <p class="text-[#737373] text-sm leading-relaxed">GA4 and Pixel tracking installed <em>before</em> spending money, ensuring 100% data visibility.</p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-white border border-[#E5E7EB] text-left fade-up hover:border-primary/50 transition-colors duration-300" style="animation-delay: 200ms;">
+                    <div class="w-10 h-10 bg-slate-50 border border-slate-100 rounded-lg flex items-center justify-center mb-6 text-slate-700">
+                        <Users size={20} />
+                    </div>
+                    <h3 class="text-lg font-bold text-[#0a0a0a] mb-2">CRM Integration</h3>
+                    <p class="text-[#737373] text-sm leading-relaxed">Connecting leads directly to your clinic management workflow or our Agency OS.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Case Study Card -->
+    <section class="py-24 bg-[#0a0a0a] text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto bg-[#171717] rounded-3xl p-8 md:p-16 border border-[#262626] fade-up relative overflow-hidden">
+                <!-- Background Glow -->
+                <div class="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center relative z-10">
+                    <div>
+                        <span class="text-primary font-bold tracking-widest uppercase text-xs mb-4 block">Case Study</span>
+                        <h3 class="text-3xl font-bold mb-6 text-white tracking-[-0.02em]">Breakeven in Month 2.</h3>
+                        <p class="text-[#a3a3a3] mb-8 leading-relaxed">
+                            Dr. M opened his dental surgery in a saturated row of shop lots in Subang Jaya. Using our Launchpad™ protocol, he secured 250+ leads before opening day.
+                        </p>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <div class="text-3xl font-bold text-white mb-1">250+</div>
+                                <div class="text-xs text-[#737373] uppercase tracking-wider">Pre-Launch Leads</div>
                             </div>
-                            <div class="bg-slate-700/50 p-4 rounded-lg">
-                                <div class="text-2xl font-bold text-primary mb-1">Month 2</div>
-                                <div class="text-xs text-slate-400">Breakeven Point</div>
-                            </div>
-                            <div class="bg-slate-700/50 p-4 rounded-lg">
-                                <div class="text-2xl font-bold text-primary mb-1">Top 3</div>
-                                <div class="text-xs text-slate-400">Google Maps Ranking</div>
-                            </div>
-                             <div class="bg-slate-700/50 p-4 rounded-lg">
-                                <div class="text-2xl font-bold text-primary mb-1">7 Days</div>
-                                <div class="text-xs text-slate-400">Fully Booked at Launch</div>
+                            <div>
+                                <div class="text-3xl font-bold text-white mb-1">7 Days</div>
+                                <div class="text-xs text-[#737373] uppercase tracking-wider">Fully Booked Launch</div>
                             </div>
                         </div>
                     </div>
-                    <div class="w-full md:w-1/3 flex items-center justify-center border-t md:border-t-0 md:border-l border-slate-700 pt-8 md:pt-0 md:pl-8">
-                         <blockquote class="text-lg italic text-slate-400 text-center">
-                            "I was terrified of opening to an empty clinic. Lamanify filled my schedule before I even finished renovating."
-                            <footer class="mt-4 text-sm font-bold text-white not-italic">- Dr. M</footer>
+                    
+                    <div class="bg-[#262626] rounded-2xl p-6 border border-[#404040]">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+                                <span class="font-serif italic font-bold">D</span>
+                            </div>
+                            <div>
+                                <div class="font-bold text-white text-sm">Dental Surgery Subang</div>
+                                <div class="text-xs text-[#737373]">New Opening</div>
+                            </div>
+                        </div>
+                        <blockquote class="text-[#d4d4d4] italic text-sm leading-relaxed mb-4">
+                            "I was terrified of opening to an empty clinic. Lamanify filled my schedule before I even finished renovating. We hit breakeven way faster than I planned."
                         </blockquote>
+                        <div class="text-xs font-bold text-primary">- Dr. M, Founder</div>
                     </div>
                 </div>
             </div>
@@ -395,22 +382,19 @@ const description = "Don't open to an empty waiting room. Lamanify's Clinic Laun
     </section>
 
     <!-- 7. Final CTA -->
-    <section class="py-24 bg-white relative overflow-hidden">
-        <div class="absolute inset-0 z-0">
-             <div class="absolute top-1/2 left-1/2 w-[800px] h-[800px] bg-gradient-to-tr from-primary/5 to-secondary/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-        </div>
+    <section class="py-32 bg-white relative overflow-hidden">
         <div class="container mx-auto px-4 relative z-10 text-center fade-up">
-            <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">When Do You Open?</h2>
-            <p class="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
+            <h2 class="text-5xl md:text-6xl font-bold text-[#0a0a0a] mb-8 tracking-[-0.03em]">When Do You Open?</h2>
+            <p class="text-xl text-[#737373] mb-10 max-w-2xl mx-auto">
                 Don't wait until the renovation is done. The clock is ticking on your marketing timeline.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Button client:load href="/contact" variant="primary" size="lg" className="shadow-xl shadow-primary/30">
-                    Get Your Pre-Launch Checklist
+                <Button client:load href="/contact" variant="primary" size="lg" className="h-14 px-8 text-lg shadow-[0_4px_14px_rgba(233,32,79,0.3)] hover:shadow-[0_6px_20px_rgba(233,32,79,0.4)] transition-all">
+                    Get Your Pre-Launch Roadmap
                 </Button>
             </div>
-            <p class="mt-6 text-sm text-slate-500">
-                Book a strategy call and we’ll give you a roadmap for your first 90 days.
+            <p class="mt-6 text-sm text-[#737373]">
+                Book a strategy call and we’ll map out your first 90 days.
             </p>
         </div>
     </section>

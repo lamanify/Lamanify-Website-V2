@@ -66,7 +66,7 @@ export default function Navbar() {
                             <div key={link.name} className="relative group">
                                 <a
                                     href={link.href}
-                                    className="text-sm font-semibold text-slate-600 group-hover:text-brand transition-colors py-5 inline-flex items-center gap-1"
+                                    className="text-sm font-semibold text-slate-900 group-hover:text-brand active:text-brand transition-colors py-5 inline-flex items-center gap-1"
                                 >
                                     {link.name}
                                     <ChevronDown className="w-3 h-3 transition-transform group-hover:rotate-180" />
@@ -99,7 +99,7 @@ export default function Navbar() {
                             <div key={link.name} className="flex flex-col">
                                 <button
                                     onClick={() => toggleMobileMenu(link.name)}
-                                    className="flex items-center justify-between w-full p-4 text-base font-bold text-slate-900 hover:bg-slate-50 rounded-2xl transition-colors"
+                                    className="flex items-center justify-between w-full p-4 text-base font-bold text-slate-900 hover:text-brand active:text-brand hover:bg-slate-50 rounded-2xl transition-colors"
                                 >
                                     {link.name}
                                     {openMobileMenu === link.name ? <ChevronUp className="h-5 w-5 text-brand" /> : <ChevronDown className="h-5 w-5 text-slate-400" />}

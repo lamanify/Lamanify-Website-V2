@@ -3,7 +3,10 @@ import path from 'path';
 import https from 'https';
 import crypto from 'crypto';
 
-function getScreenshotOneUrl(options: any, accessKey = 'XBhBsnzjDC2xGQ', secretKey = 'sdRgqQmHPxRrrw') {
+const SCREENSHOTONE_ACCESS_KEY = process.env.SCREENSHOTONE_ACCESS_KEY || 'XBhBsnzjDC2xGQ';
+const SCREENSHOTONE_SECRET_KEY = process.env.SCREENSHOTONE_SECRET_KEY || 'sdRgqQmHPxRrrw';
+
+function getScreenshotOneUrl(options: any, accessKey = SCREENSHOTONE_ACCESS_KEY, secretKey = SCREENSHOTONE_SECRET_KEY) {
     const baseUrl = 'https://api.screenshotone.com/take';
     const params = new URLSearchParams();
     params.append('access_key', accessKey);
@@ -15,7 +18,7 @@ function getScreenshotOneUrl(options: any, accessKey = 'XBhBsnzjDC2xGQ', secretK
     return `${baseUrl}?${params.toString()}&signature=${signature}`;
 }
 
-const targetUrl = 'https://www.klinikaurora.com.my/';
+const targetUrl = 'https://www.kitadental.com.my/';
 const downloadsDir = path.join(process.cwd(), 'temp_screenshots'); // Creates this temporary folder relative to where you run it
 
 if (!fs.existsSync(downloadsDir)) {
@@ -27,39 +30,41 @@ const images = [
         name: 'mobile_full.webp',
         options: {
             url: targetUrl,
-            viewport_width: 390,
-            viewport_height: 844,
-            device_scale_factor: 2,
-            user_agent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1',
+            viewport_device: 'iphone_16',
+            viewport_mobile: true,
+            viewport_has_touch: false,
             block_ads: true,
             block_cookie_banners: true,
-            block_banners_by_heuristics: false,
+            block_banners_by_heuristics: true,
             block_trackers: true,
-            delay: 0,
+            block_chats: true,
+            delay: 2,
             timeout: 60,
             response_type: 'by_format',
-            full_page: false, // full_page can be unstable on mobile viewports
             image_quality: 80,
-            format: 'webp'
+            format: 'webp',
+            full_page: false
         }
     },
     {
-        name: 'desktop_full.webp',
+        name: 'desktop_full.webp', // Keeping name to avoid breaking Astro file links, but it's now an iPad capture
         options: {
             url: targetUrl,
-            viewport_width: 1920,
-            viewport_height: 1080,
-            device_scale_factor: 1, // Standard for desktop full page to keep size manageable
+            viewport_device: 'ipad',
+            viewport_mobile: false,
+            viewport_has_touch: false,
+            viewport_landscape: true,
             block_ads: true,
             block_cookie_banners: true,
-            block_banners_by_heuristics: false,
+            block_banners_by_heuristics: true,
             block_trackers: true,
-            delay: 0,
+            block_chats: true,
+            delay: 2,
             timeout: 60,
             response_type: 'by_format',
-            full_page: true,
             image_quality: 80,
-            format: 'webp'
+            format: 'webp',
+            full_page: false
         }
     }
 ];

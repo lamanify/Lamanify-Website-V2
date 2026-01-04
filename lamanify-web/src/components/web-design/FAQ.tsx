@@ -20,8 +20,24 @@ const faqs = [
         answer: "All packages come with 1 year FREE maintenance. After the first year, a monthly or annual retainer fee applies to cover hosting, domain, security, and support services to keep your site running smoothly."
     },
     {
-        question: "What Content Management System (CMS) do you use?",
-        answer: "We use WordPress, the world's most popular CMS. It offers an easy learning curve, robust security, and flexibility for future growth."
+        question: "How does contact form works?",
+        answer: "When a user submit an entry through your website form, one notification with the entry details will go to you as an admin, and another similar email will go to the user whom submitted the form."
+    },
+    {
+        question: "What Content Management System (CMS) are you using?",
+        answer: "We are using Wordpress as the CMS to provide an easy learning curve for everyone to learn from it. Those who don't know what a CMS is, CMS is a way to manage all your content published to the frontend of your web store."
+    },
+    {
+        question: "What factors should I consider when choosing a package?",
+        answer: "Consider your clinic's goals, budget, and the level of customization you require. Assess the features offered in each package and how they align with your specific needs."
+    },
+    {
+        question: "What if I am unsure about the features I need?",
+        answer: "It's common to be unsure about the features you require. We recommend starting with an evaluation of your clinic's website goals and functionality needs."
+    },
+    {
+        question: "Can I customize the packages to fit my clinic's specific requirements?",
+        answer: "Yes, customization options are available for certain packages. We offer tailored solutions to meet your clinic's unique needs. Contact our team to discuss your requirements."
     }
 ];
 

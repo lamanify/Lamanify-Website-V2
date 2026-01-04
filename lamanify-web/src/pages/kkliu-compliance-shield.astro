@@ -1,0 +1,256 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { ShieldCheck, AlertTriangle, CheckCircle2, XCircle, FileText, Lock } from 'lucide-react';
+
+const title = "KKLIU Compliance Shield™ | Lamanify";
+const description = "We are the only agency that builds high-converting medical websites and ad campaigns strictly adhering to the Medicines (Advertisement and Sale) Act 1956.";
+---
+
+<Layout title={title} description={description}>
+  <!-- Hero Section -->
+  <section class="relative py-20 lg:py-32 bg-white overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-20"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <div class="inline-flex items-center justify-center p-3 bg-surface-offwhite rounded-2xl mb-8 shadow-sm border border-border ring-1 ring-slate-900/5">
+        <ShieldCheck className="w-12 h-12 text-brand" />
+      </div>
+      <h1 class="text-4xl md:text-6xl font-bold text-slate-900 mb-6">
+        Aggressive Growth. <br />
+        <span class="text-gradient">Zero Regulatory Risk.</span>
+      </h1>
+      <p class="text-xl text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed">
+        We are the only agency that builds high-converting medical websites and ad campaigns<br class="hidden md:block" /> strictly adhering to the <em>Medicines (Advertisement and Sale) Act 1956</em>.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="#audit-form" class="btn-primary inline-flex items-center justify-center">
+          Start Your Compliant Growth Strategy
+        </a>
+        <p class="text-sm text-slate-500 font-medium">
+          <span class="inline-block w-2 h-2 rounded-full bg-green-500 mr-2"></span>
+          Sleep soundly knowing your marketing is MOH proof.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Reality Check -->
+  <section class="py-20 bg-surface-offwhite">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-100 text-red-700 text-xs font-bold uppercase tracking-wide mb-4">
+          <AlertTriangle className="w-4 h-4" />
+          The Reality Check
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+          Generalist Agencies Are Putting Your <br /><span class="text-red-600">Medical License at Risk.</span>
+        </h2>
+        <p class="text-lg text-slate-600 leading-relaxed">
+          Marketing for clinics isn't like marketing for e-commerce. A standard agency will use words like 
+          <span class="font-bold text-slate-900">"The Best"</span>, 
+          <span class="font-bold text-slate-900">"Guaranteed"</span>, or 
+          <span class="font-bold text-slate-900">"No. 1"</span> to get clicks.
+          In Malaysia, these words aren't just "marketing fluff"—they are <span class="underline decoration-red-500/30 decoration-2 underline-offset-2">illegal</span>.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="card-bento group">
+          <h3 class="font-bold text-slate-900 mb-4 flex items-center gap-2">
+            <XCircle className="w-5 h-5 text-red-500" />
+            Consequences of Non-Compliance
+          </h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3 text-slate-600 text-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-red-500 mt-2 shrink-0"></span>
+                <span><strong>Fines up to RM3,000 - RM50,000</strong> per offense.</span>
+            </li>
+            <li class="flex items-start gap-3 text-slate-600 text-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-red-500 mt-2 shrink-0"></span>
+                <span><strong>Revocation</strong> of your APC (Annual Practising Certificate).</span>
+            </li>
+            <li class="flex items-start gap-3 text-slate-600 text-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-red-500 mt-2 shrink-0"></span>
+                <span><strong>Flagging</strong> by the Medicine Advertisements Board (MAB).</span>
+            </li>
+            <li class="flex items-start gap-3 text-slate-600 text-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-red-500 mt-2 shrink-0"></span>
+                <span><strong>Competitor Reports</strong> (Your rivals are watching your ads).</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="card-bento flex flex-col justify-center items-center text-center">
+             <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mb-4">
+                <Lock className="w-8 h-8 text-slate-400" />
+             </div>
+             <p class="text-slate-500 text-sm italic">
+                "We don’t view compliance as a barrier to creativity; we view it as a framework for trust."
+             </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Solution -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">How We Protect You.</h2>
+        <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+            We have internalized the MAB guidelines so you don't have to. Introducing the <strong>KKLIU Compliance Shield™</strong>.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Step 1 -->
+        <div class="group h-full">
+            <div class="card-bento h-full relative">
+                <div class="w-12 h-12 bg-slate-900 rounded-xl flex items-center justify-center text-white font-bold text-xl mb-6">1</div>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">The Vocabulary Filter</h3>
+                <p class="text-slate-600 leading-relaxed text-sm">
+                    We automatically strip out blacklisted terms (superlatives, absolutes, unverified claims) and replace them with <strong>"Safe-Persuasion"</strong> synonyms that convert without breaking the law.
+                </p>
+            </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="group h-full">
+            <div class="card-bento h-full relative">
+                <div class="w-12 h-12 bg-slate-900 rounded-xl flex items-center justify-center text-white font-bold text-xl mb-6">2</div>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">Visual Safety</h3>
+                <p class="text-slate-600 leading-relaxed text-sm">
+                    We design creative assets that avoid prohibited 'Before & After' comparisons, focusing instead on lifestyle outcomes and emotional resonance allowed under MOH guidelines.
+                </p>
+            </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="group h-full">
+             <div class="card-bento h-full relative">
+                <div class="w-12 h-12 bg-slate-900 rounded-xl flex items-center justify-center text-white font-bold text-xl mb-6">3</div>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">Submission Readiness</h3>
+                <p class="text-slate-600 leading-relaxed text-sm">
+                    Our copy is written to pass MAB vetting on the first try, significantly reducing the turnaround time to get your <code class="bg-slate-100 px-2 py-0.5 rounded text-slate-800 font-mono text-xs">KKLIU/xxxx/xxxx</code> approval number.
+                </p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Free Copywriting -->
+  <section class="py-20 bg-slate-900 text-white relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-brand/10 to-transparent"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row items-center gap-12">
+        <div class="flex-1">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 text-brand text-xs font-bold uppercase tracking-wide mb-4">
+                <FileText className="w-4 h-4" />
+                Value Proposition
+            </div>
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">Why We Write Your Medical Copy For Free.</h2>
+            <p class="text-lg text-slate-300 leading-relaxed mb-8">
+                Most web developers ask <em>you</em> to supply the text. We don't.
+                Why? <strong>Because we can't afford to let you get it wrong.</strong>
+            </p>
+            <p class="text-base text-slate-400 leading-relaxed">
+                To ensure your website and ads are safe, we include professional, medically compliant copywriting in every development package—at no extra cost. We control the narrative to protect your brand.
+            </p>
+        </div>
+        <div class="flex-1 w-full">
+            <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 relative">
+                <div class="absolute -top-4 -right-4 bg-brand text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg rotate-12">
+                    RM2,500 Value
+                </div>
+                <h4 class="font-bold text-xl mb-4">Included in Every Campaign</h4>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-3">
+                        <CheckCircle2 className="w-5 h-5 text-brand" />
+                        <span class="text-slate-300">Audited Marketing Headlines</span>
+                    </li>
+                     <li class="flex items-center gap-3">
+                        <CheckCircle2 className="w-5 h-5 text-brand" />
+                        <span class="text-slate-300">Disclaimer & Risk Statement Footer</span>
+                    </li>
+                     <li class="flex items-center gap-3">
+                        <CheckCircle2 className="w-5 h-5 text-brand" />
+                        <span class="text-slate-300">MOH-Compliant Image Selection</span>
+                    </li>
+                     <li class="flex items-center gap-3">
+                        <CheckCircle2 className="w-5 h-5 text-brand" />
+                        <span class="text-slate-300">Zero "Guaranteed Cure" Language</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-slate-900">Us vs. Others</h2>
+        <p class="text-slate-600 mt-2">Why generalist agencies are a risk to your practice.</p>
+      </div>
+      
+      <div class="overflow-x-auto rounded-2xl border border-border">
+        <table class="min-w-full divide-y divide-slate-200">
+            <thead class="bg-surface-offwhite">
+                <tr>
+                    <th scope="col" class="px-6 py-4 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">Feature</th>
+                    <th scope="col" class="px-6 py-4 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">Generalist Agency</th>
+                    <th scope="col" class="px-6 py-4 text-left text-xs font-bold text-brand uppercase tracking-wider">Lamanify</th>
+                </tr>
+            </thead>
+            <tbody class="bg-white divide-y divide-slate-200">
+                <tr>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900">MOH Guideline Knowledge</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500">Guesses or Ignores</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-slate-900">Deeply Integrated</td>
+                </tr>
+                <tr>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900">Ad Copy Style</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500 flex items-center gap-2">
+                        <AlertTriangle className="w-4 h-4 text-red-500" />
+                        High Risk ("Guaranteed Cure!")
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-slate-900">High Trust ("Clinical Excellence")</td>
+                </tr>
+                <tr>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900">MAB Submission Support</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500">None (You're on your own)</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-slate-900">Submission-Ready Assets</td>
+                </tr>
+                <tr>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900">Content Creation</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500">Client must write it</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-slate-900">Done-For-You (Compliant)</td>
+                </tr>
+               <tr class="bg-slate-50/50">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900">Risk Profile</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-red-500 font-bold">High (Fines/Bans)</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-green-600 font-bold flex items-center gap-2">
+                        <ShieldCheck className="w-4 h-4" />
+                        Zero (Shielded)
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-24 bg-white border-t border-slate-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl font-bold text-slate-900 mb-6">
+            Don't gamble your license on a catchy headline.
+        </h2>
+        <div class="flex justify-center">
+            <a href="#audit-form" class="btn-primary inline-flex items-center justify-center text-lg">
+                Start Your Compliant Growth Strategy
+            </a>
+        </div>
+    </div>
+  </section>
+</Layout>
