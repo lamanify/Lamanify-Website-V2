@@ -1,0 +1,68 @@
+---
+import { MessageSquare, BarChart3, Database } from 'lucide-react';
+---
+
+<section class="py-24 bg-slate-900 text-white overflow-hidden">
+  <div class="container mx-auto px-4">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      
+      <!-- Content -->
+      <div class="order-2 lg:order-1">
+        <div class="inline-flex items-center rounded-full border border-brand/50 bg-brand/10 px-4 py-1.5 text-xs font-semibold tracking-wider text-brand mb-8 uppercase">
+          Technology
+        </div>
+        
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-6">Powered by Agency OS.</h2>
+        <p class="text-xl text-slate-300 mb-10 font-normal">
+          Marketing + Technology = Unfair Advantage.
+        </p>
+        <p class="text-slate-400 mb-10 leading-relaxed text-lg">
+          We don't just use spreadsheets. We leverage our proprietary tech stack, <strong>Agency OS</strong>, to give you enterprise-level visibility into your growth.
+        </p>
+
+        <div class="space-y-8">
+          <div class="flex gap-4">
+             <div class="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center shrink-0 border border-slate-700 shadow-lg">
+               <Database className="w-6 h-6 text-brand" />
+             </div>
+             <div>
+               <h3 class="text-xl font-bold mb-2">Real-Time Lead Board</h3>
+               <p class="text-slate-400">See every inquiry as it happens. Manage your pipeline with a drag-and-drop interface designed for clinics.</p>
+             </div>
+          </div>
+
+           <div class="flex gap-4">
+             <div class="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center shrink-0 border border-slate-700 shadow-lg">
+               <MessageSquare className="w-6 h-6 text-brand" />
+             </div>
+             <div>
+               <h3 class="text-xl font-bold mb-2">WhatsApp Integration</h3>
+               <p class="text-slate-400">Automated reminders, confirmations, and speed-to-lead bots that engage patients instantly.</p>
+             </div>
+          </div>
+
+           <div class="flex gap-4">
+             <div class="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center shrink-0 border border-slate-700 shadow-lg">
+               <BarChart3 className="w-6 h-6 text-brand" />
+             </div>
+             <div>
+               <h3 class="text-xl font-bold mb-2">Revenue Attribution</h3>
+               <p class="text-slate-400">Know exactly which RM100 ad spend brought in that RM5,000 surgery. No more guessing.</p>
+             </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Visual -->
+      <div class="order-1 lg:order-2 relative">
+        <div class="absolute inset-0 bg-brand/20 blur-[100px] -z-10 rounded-full"></div>
+        <img 
+          src="/images/agency-os-dashboard.png" 
+          alt="Agency OS Dashboard - Real Time Analytics" 
+          class="w-full h-auto rounded-xl shadow-[0_0_50px_-12px_rgba(233,32,79,0.5)] border border-slate-700/50 hover:scale-[1.02] transition-transform duration-500"
+        />
+      </div>
+
+    </div>
+  </div>
+</section>

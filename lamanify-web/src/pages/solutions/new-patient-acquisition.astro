@@ -1,0 +1,384 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Button } from '../../components/ui/Button';
+import { TrendingUp, Users, Target, Zap, ShieldCheck, Phone, Filter, BarChart3, Clock, ArrowRight } from 'lucide-react';
+
+const title = "Revenue Maximization - Vertical Growth for Established Clinics | Lamanify";
+const description = "Maximize revenue per square foot for your established clinic. Don't open a second branch—optimize your current facility with our Vertical Growth Framework.";
+---
+
+<Layout title={title} description={description}>
+  <main class="overflow-hidden">
+    <!-- 1. Hero Section: The "Vertical Growth" Promise -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-slate-50 overflow-hidden">
+      <!-- Background Elements -->
+      <div class="absolute inset-0 z-0 opacity-40">
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+      </div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+          <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary font-semibold text-sm mb-6 fade-up">
+            NEW PATIENT ACQUISITION STRATEGY
+          </span>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight mb-6 fade-up" style="animation-delay: 100ms;">
+             Maximize Your Revenue <br class="hidden md:block" />
+             <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Per Square Foot.</span>
+          </h1>
+          <p class="text-lg md:text-xl text-slate-600 mb-8 max-w-2xl mx-auto fade-up" style="animation-delay: 200ms;">
+            You don't need to open a second branch to double your profits. We help established clinics optimize their current facility, fill empty appointment slots, and attract higher-value patients using our <strong>Vertical Growth Framework</strong>.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center fade-up" style="animation-delay: 300ms;">
+            <Button client:load href="#solution" variant="primary" size="lg">
+              Optimize Your Clinic →
+            </Button>
+            <p class="text-sm text-slate-500 italic mt-2 sm:mt-0">
+              Designed for established clinics looking to scale revenue, not overhead.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. The Problem: "The Revenue Plateau" -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center mb-16 fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Are You Busy, But Not Growing?</h2>
+            <p class="text-lg text-slate-600">
+                Your clinic has been running for a few years. You have a steady flow of regulars. You are "stable." But you are hitting a ceiling.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <!-- Problem 1 -->
+            <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-lg transition-all duration-300 fade-up group">
+                <div class="w-14 h-14 bg-red-100 text-red-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <Clock size={28} />
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">The "Empty Afternoon" Syndrome</h3>
+                <p class="text-slate-600 leading-relaxed">You are packed on Saturday mornings, but your staff sits idle on Tuesday afternoons. That’s lost revenue.</p>
+            </div>
+
+            <!-- Problem 2 -->
+            <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-lg transition-all duration-300 fade-up group" style="animation-delay: 100ms;">
+                <div class="w-14 h-14 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <Filter size={28} />
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">The "Low-Value" Trap</h3>
+                <p class="text-slate-600 leading-relaxed">You are busy treating low-margin cases (e.g., cough/flu or basic cleaning) while your high-margin equipment sits unused.</p>
+            </div>
+
+            <!-- Problem 3 -->
+            <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-lg transition-all duration-300 fade-up group" style="animation-delay: 200ms;">
+                <div class="w-14 h-14 bg-slate-200 text-slate-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <BarChart3 size={28} />
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">The Referral Cap</h3>
+                <p class="text-slate-600 leading-relaxed">Word-of-mouth got you this far, but it’s not enough to take you to the next level.</p>
+            </div>
+        </div>
+
+        <div class="mt-16 text-center fade-up max-w-2xl mx-auto">
+            <div class="bg-slate-900 text-white p-6 rounded-xl shadow-xl">
+                <p class="text-xl font-medium">
+                    The Reality: You have <span class="text-primary font-bold">Hidden Capacity</span>. <br/>
+                    <span class="text-slate-400 text-base font-normal mt-2 block">You don't need more space; you need a system to fill the space you already have with better patients.</span>
+                </p>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. The Solution: "Profit Maximizer" System -->
+    <section id="solution" class="py-24 bg-slate-950 text-white relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-secondary/10 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-20 fade-up">
+                <span class="text-primary font-bold tracking-wider uppercase text-sm mb-3 block">Vertical Growth Framework</span>
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">Squeeze More Profit Out of <br/>Your Existing Clinic.</h2>
+            </div>
+
+            <div class="space-y-24 max-w-5xl mx-auto">
+                <!-- Strategy 1 -->
+                <div class="flex flex-col md:flex-row items-center gap-12 group fade-up">
+                    <div class="w-full md:w-1/2 order-2 md:order-1">
+                        <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl relative overflow-hidden group-hover:border-primary/50 transition-colors duration-500">
+                           <div class="absolute top-0 right-0 p-4 opacity-10">
+                                <Users size={120} />
+                           </div>
+                           <h3 class="text-2xl font-bold text-white mb-2 flex items-center gap-3">
+                                <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/20 text-primary text-sm">1</span>
+                                Demand Generation
+                           </h3>
+                           <p class="text-primary font-medium mb-6">Filling the Gaps</p>
+                           
+                           <ul class="space-y-4 text-slate-300">
+                                <li class="flex items-start gap-3">
+                                    <Target className="w-5 h-5 text-primary shrink-0 mt-1" />
+                                    <div>
+                                        <strong class="text-white block mb-1">The Goal: 90% Capacity Utilization.</strong>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <Zap className="w-5 h-5 text-primary shrink-0 mt-1" />
+                                    <div>
+                                        <strong class="text-white block mb-1">The Tactic: Yield Management Campaigns.</strong>
+                                        <p class="text-sm">We don't just run ads 24/7. We target specific demographics (e.g., retirees, flexible workers) to fill your off-peak hours, ensuring your fixed costs are covered.</p>
+                                    </div>
+                                </li>
+                           </ul>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 order-1 md:order-2">
+                        <div class="text-left md:text-right">
+                             <h4 class="text-3xl md:text-4xl font-black text-slate-800 dark:text-slate-800/50 uppercase leading-none mb-4 absolute -z-10 transform scale-150 origin-center opacity-0 md:opacity-100 select-none">Utilization</h4> 
+                             <!-- Placeholder for imagery if needed, or keeping it text heavy for now as per copy focus -->
+                             <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-800/50 aspect-video bg-gradient-to-br from-slate-900 to-slate-800 flex items-center justify-center">
+                                 <div class="text-center">
+                                     <div class="text-5xl font-bold text-primary mb-2">90%</div>
+                                     <div class="text-slate-400">Target Utilization</div>
+                                 </div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Strategy 2 -->
+                <div class="flex flex-col md:flex-row items-center gap-12 group fade-up">
+                     <div class="w-full md:w-1/2">
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-800/50 aspect-video bg-gradient-to-bl from-slate-900 to-slate-800 flex items-center justify-center">
+                             <TrendingUp size={64} className="text-secondary opacity-80" />
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl relative overflow-hidden group-hover:border-secondary/50 transition-colors duration-500">
+                           <div class="absolute top-0 right-0 p-4 opacity-10">
+                                <TrendingUp size={120} />
+                           </div>
+                           <h3 class="text-2xl font-bold text-white mb-2 flex items-center gap-3">
+                                <span class="flex items-center justify-center w-8 h-8 rounded-full bg-secondary/20 text-secondary text-sm">2</span>
+                                Funnel Upgrades
+                           </h3>
+                           <p class="text-secondary font-medium mb-6">Better Patients</p>
+                           
+                           <ul class="space-y-4 text-slate-300">
+                                <li class="flex items-start gap-3">
+                                    <Target className="w-5 h-5 text-secondary shrink-0 mt-1" />
+                                    <div>
+                                        <strong class="text-white block mb-1">The Goal: Higher Average Order Value.</strong>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <Zap className="w-5 h-5 text-secondary shrink-0 mt-1" />
+                                    <div>
+                                        <strong class="text-white block mb-1">The Tactic: High-Value Focus.</strong>
+                                        <p class="text-sm">We shift your marketing mix. Instead of advertising "General Consultation" (Low Margin), we build aggressive funnels for your High-Ticket Services (e.g., Veneers, Minor Surgery). Replace a RM50 patient with a RM500 patient.</p>
+                                    </div>
+                                </li>
+                           </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Strategy 3 -->
+                <div class="flex flex-col md:flex-row items-center gap-12 group fade-up">
+                    <div class="w-full md:w-1/2 order-2 md:order-1">
+                        <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl relative overflow-hidden group-hover:border-primary/50 transition-colors duration-500">
+                           <div class="absolute top-0 right-0 p-4 opacity-10">
+                                <Target size={120} />
+                           </div>
+                           <h3 class="text-2xl font-bold text-white mb-2 flex items-center gap-3">
+                                <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/20 text-primary text-sm">3</span>
+                                The "Unmissable" Presence
+                           </h3>
+                           <p class="text-primary font-medium mb-6">Dominate Your 5km Radius</p>
+                           
+                           <ul class="space-y-4 text-slate-300">
+                                <li class="flex items-start gap-3">
+                                    <Target className="w-5 h-5 text-primary shrink-0 mt-1" />
+                                    <div>
+                                        <strong class="text-white block mb-1">The Goal: Local Domination.</strong>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <Zap className="w-5 h-5 text-primary shrink-0 mt-1" />
+                                    <div>
+                                        <strong class="text-white block mb-1">The Tactic: Aggressive SEO.</strong>
+                                        <p class="text-sm">Since you aren't expanding location-wise, you must own your neighborhood. We implement an aggressive Local SEO strategy so that anyone within a 15-minute drive sees <em>only you</em> when they search.</p>
+                                    </div>
+                                </li>
+                           </ul>
+                        </div>
+                    </div>
+                     <div class="w-full md:w-1/2 order-1 md:order-2">
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-800/50 aspect-video bg-slate-900 flex items-center justify-center">
+                             <!-- Abstract Map Representation -->
+                             <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent"></div>
+                             <div class="w-4 h-4 bg-primary rounded-full shadow-[0_0_20px_rgba(233,32,79,0.8)] animate-pulse"></div>
+                             <div class="absolute w-32 h-32 border border-primary/30 rounded-full animate-ping [animation-duration:3s]"></div>
+                             <div class="absolute w-64 h-64 border border-primary/10 rounded-full animate-ping [animation-duration:4s]"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Technology: Conversion Optimization -->
+    <section class="py-20 bg-slate-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center mb-16 fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Stop Leaking Revenue.</h2>
+                <p class="text-lg text-slate-600">
+                    Most established clinics lose 40% of their leads because they don't answer the phone fast enough.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg transition-all fade-up">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6">
+                        <Zap size={24} />
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">The "Speed-to-Lead" Bot</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Our <strong>Agency OS</strong> instantly engages inquiries via WhatsApp within 5 seconds. Catch patients while they are still looking at their phone.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg transition-all fade-up" style="animation-delay: 100ms;">
+                    <div class="w-12 h-12 bg-green-100 text-green-600 rounded-lg flex items-center justify-center mb-6">
+                        <Phone size={24} />
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Online Booking 2.0</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        We replace your clunky "Contact Us" form with a seamless, direct booking engine that can secure deposits, significantly reducing no-shows.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Compliance: Reputation -->
+    <section class="py-20 bg-white border-t border-slate-100">
+        <div class="container mx-auto px-4">
+             <div class="flex flex-col md:flex-row items-center gap-12 max-w-5xl mx-auto">
+                <div class="w-full md:w-1/2 fade-up">
+                    <div class="inline-block p-2 px-4 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-xs font-bold uppercase tracking-wider mb-6">
+                        Risk Management
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Aggressive Growth. <br/>Conservative Compliance.</h2>
+                    <p class="text-slate-600 mb-6 text-lg">
+                        You have built a brand over the years. We won't ruin it with cheap tactics.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3">
+                            <ShieldCheck className="w-5 h-5 text-green-600" />
+                            <span class="text-slate-700 font-medium">Brand-Aligned Messaging</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <ShieldCheck className="w-5 h-5 text-green-600" />
+                            <span class="text-slate-700 font-medium">Regulatory Safety (KKLIU Vetted)</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <ShieldCheck className="w-5 h-5 text-green-600" />
+                            <span class="text-slate-700 font-medium">No Spammy Tactics</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/2 fade-up" style="animation-delay: 200ms;">
+                    <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200">
+                        <p class="italic text-slate-600 mb-4">
+                            "We match your clinic's tone of voice. All campaigns are vetted against guidelines to ensure your established license is never at risk."
+                        </p>
+                        <div class="flex items-center gap-3 mt-6 border-t border-slate-200 pt-4">
+                            <div class="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center font-bold text-slate-500">L</div>
+                            <div>
+                                <div class="text-slate-900 font-bold text-sm">Lamanify Compliance Team</div>
+                                <div class="text-slate-500 text-xs">Internal Review Board</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </section>
+
+    <!-- 6. Case Study -->
+    <section class="py-20 bg-slate-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 md:p-12 border border-slate-700 fade-up shadow-2xl">
+                <div class="flex flex-col md:flex-row gap-10">
+                    <div class="w-full md:w-2/3">
+                        <span class="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full mb-6 inline-block">CASE STUDY</span>
+                        <h3 class="text-3xl font-bold mb-6">Doubling Revenue in the Same Location.</h3>
+                        
+                        <div class="grid sm:grid-cols-2 gap-y-6 gap-x-12 text-slate-300 mb-8">
+                             <div>
+                                <span class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">Client</span>
+                                <span class="text-white font-medium">[Name] Dental Center (Cheras)</span>
+                             </div>
+                             <div>
+                                <span class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">Profile</span>
+                                <span class="text-white font-medium">Established 5 years. 2 Chairs. Stuck at RM60k/month.</span>
+                             </div>
+                             <div class="sm:col-span-2">
+                                <span class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">Solution</span>
+                                <span class="text-white font-medium">Shifted focus from "General Scaling" to "Implants & Braces." Automated recall system.</span>
+                             </div>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-4 border-t border-slate-700 pt-8">
+                            <div>
+                                <div class="text-3xl font-bold text-primary mb-1">40%</div>
+                                <div class="text-xs text-slate-400">High-Ticket Booking Mix (up from 10%)</div>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-bold text-primary mb-1">RM110k</div>
+                                <div class="text-xs text-slate-400">Monthly Revenue (up from RM60k)</div>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-bold text-primary mb-1">0%</div>
+                                <div class="text-xs text-slate-400">Increase in Overhead</div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="w-full md:w-1/3 flex flex-col justify-center border-t md:border-t-0 md:border-l border-slate-700 pt-8 md:pt-0 md:pl-8">
+                         <div class="relative">
+                            <div class="absolute -top-4 -left-2 text-6xl text-slate-700 font-serif opacity-50">"</div>
+                             <blockquote class="text-lg italic text-slate-300 relative z-10">
+                                wanted to grow but didn't want to manage a second branch or hire more dentists. Lamanify showed me the clear path.
+                            </blockquote>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Final CTA -->
+    <section class="py-24 bg-white relative overflow-hidden">
+        <div class="absolute inset-0 z-0 pointer-events-none">
+             <div class="absolute top-1/2 left-1/2 w-[1000px] h-[1000px] bg-gradient-to-tr from-primary/5 to-secondary/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10 text-center fade-up">
+            <h2 class="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight">Unlock Your Clinic’s <br/> Full Potential.</h2>
+            <p class="text-xl text-slate-600 mb-10 max-w-2xl mx-auto">
+                You are sitting on a goldmine. Let us help you dig it up.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Button client:load href="/contact" variant="primary" size="xl" className="shadow-xl shadow-primary/30 px-10 py-5 text-lg">
+                    Get a Revenue Potential Audit
+                </Button>
+            </div>
+            <p class="mt-6 text-sm text-slate-500">
+                We’ll analyze your capacity and show you how much revenue you are leaving on the table.
+            </p>
+        </div>
+    </section>
+  </main>
+</Layout>

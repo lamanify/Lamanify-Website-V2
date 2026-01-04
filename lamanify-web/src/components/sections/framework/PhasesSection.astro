@@ -1,0 +1,97 @@
+---
+const phases = [
+  {
+    phase: "PHASE 1",
+    title: "Foundation & Compliance",
+    duration: "Weeks 1-2",
+    description: "The \"Safety Check\" Phase. Before we spend a cent on ads, we fix the leaks.",
+    items: [
+      { title: "KKLIU Audit", desc: "We review your current assets to ensure you are safe from fines." },
+      { title: "Technical SEO Setup", desc: "We optimize your Google Business Profile and website speed (Core Web Vitals)." },
+      { title: "Tracking Infrastructure", desc: "We install advanced conversion tracking (GA4, GTM) so we know exactly where every patient comes from." }
+    ]
+  },
+  {
+    phase: "PHASE 2",
+    title: "The Traffic Engine",
+    duration: "Weeks 3-4",
+    description: "The \"Volume\" Phase. We turn on the tap using high-intent sources.",
+    items: [
+      { title: "Hyper-Local Search", desc: "Dominating \"Near Me\" terms for high-margin treatments." },
+      { title: "Precision Paid Media", desc: "Google Ads for intent (people searching for solutions) and Social Ads for awareness." },
+      { title: "Creative Testing", desc: "We test multiple angles (Scientific vs. Emotional) to lower your ad costs." }
+    ]
+  },
+  {
+    phase: "PHASE 3",
+    title: "Conversion & Automation",
+    duration: "Ongoing",
+    description: "The \"Booking\" Phase. Traffic is useless if it doesn't book.",
+    items: [
+      { title: "Lamanify Site™ Landing Pages", desc: "We deploy high-converting pages specifically for your campaigns." },
+      { title: "Smart Booking Forms", desc: "Frictionless forms that qualify leads (Cash vs. Panel)." },
+      { title: "The \"Speed-to-Lead\" Bot", desc: "Our Agency OS automation instantly WhatsApps the lead and notifies your front desk." }
+    ]
+  },
+  {
+    phase: "PHASE 4",
+    title: "Optimization & Scale",
+    duration: "Monthly",
+    description: "The \"Growth\" Phase. We don't set and forget. We engineer efficiency.",
+    items: [
+      { title: "CPA Reduction", desc: "We cut the keywords that waste money and double down on the ones that bring profit." },
+      { title: "Capacity Management", desc: "Too busy? We dial back. Too quiet? We ramp up." },
+      { title: "Reporting", desc: "You get a monthly executive dashboard showing exactly how much revenue we generated." }
+    ]
+  }
+];
+---
+
+<section id="how-it-works" class="py-24 bg-slate-50 relative overflow-hidden">
+  <!-- Background Pattern -->
+  <div class="absolute inset-0 opacity-[0.03] bg-[url('/images/grid-pattern.svg')]"></div>
+
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="text-center mb-20">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">How We Install The Engine.</h2>
+      <p class="text-xl text-slate-600 max-w-3xl mx-auto">A 4-Phase Engineering Process designed to take you from unpredictable growth to market dominance.</p>
+    </div>
+
+    <div class="space-y-8 max-w-5xl mx-auto">
+      {phases.map((phase, index) => (
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+          <div class="md:flex">
+            <!-- Phase Header -->
+            <div class="bg-slate-900 text-white p-8 md:w-1/3 flex flex-col justify-center relative overflow-hidden group">
+              <div class="absolute top-0 right-0 w-40 h-40 bg-brand/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+              
+              <span class="text-brand font-bold tracking-widest text-sm mb-2">{phase.phase}</span>
+              <h3 class="text-2xl font-bold mb-4">{phase.title}</h3>
+              <div class="inline-flex items-center px-3 py-1 bg-slate-800 rounded-full text-xs font-medium text-slate-300 w-fit">
+                {phase.duration}
+              </div>
+              <p class="mt-4 text-slate-400 text-sm leading-relaxed border-t border-slate-800 pt-4">
+                {phase.description}
+              </p>
+            </div>
+
+            <!-- Phase Items -->
+            <div class="p-8 md:w-2/3 bg-white">
+              <ul class="space-y-6">
+                {phase.items.map((item) => (
+                  <li class="flex gap-4">
+                    <div class="w-2 h-2 rounded-full bg-brand mt-2 shrink-0"></div>
+                    <div>
+                      <h4 class="text-slate-900 font-bold text-base mb-1">{item.title}</h4>
+                      <p class="text-slate-600 text-sm">{item.desc}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -20,25 +20,25 @@ const goals: SolutionGoal[] = [
         icon: Users,
         title: 'New Patient Acquisition',
         description: 'Focus on volume and filling calendars with high-intent patients.',
-        href: '/solutions/acquisition'
+        href: '/solutions/new-patient-acquisition'
     },
     {
         icon: TrendingUp,
         title: 'Multi-Location Scaling',
         description: 'Strategic growth for chains opening their 2nd, 3rd, or 10th branch.',
-        href: '/solutions/scaling'
+        href: '/solutions/multi-location-scaling'
     },
     {
         icon: Rocket,
         title: 'Clinic Launch',
         description: 'A "Go-to-market" package for new clinics to hit the ground running.',
-        href: '/solutions/launch'
+        href: '/solutions/clinic-launch'
     },
     {
         icon: UserPlus,
         title: 'Patient Reactivation',
         description: 'Strategies to bring old patients back using CRM and Email marketing.',
-        href: '/solutions/reactivation'
+        href: '/solutions/patient-reactivation'
     },
 ];
 

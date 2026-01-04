@@ -1,0 +1,28 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Hero } from '../../components/spa-wellness/Hero';
+import { Problem } from '../../components/spa-wellness/Problem';
+import { Solution } from '../../components/spa-wellness/Solution';
+import { Compliance } from '../../components/spa-wellness/Compliance';
+import { Menu } from '../../components/spa-wellness/Menu';
+import { CaseStudy } from '../../components/spa-wellness/CaseStudy';
+import { FinalCTA } from '../../components/spa-wellness/FinalCTA';
+---
+
+<Layout title="Spa & Wellness Growth Engine | Lamanify" description="Fill empty slots and sell packages for your Spa or Wellness Center. High-converting marketing for premium wellness businesses.">
+    <!-- Injecting Playfair Display for the luxury serif vibe -->
+    <Fragment slot="head">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    </Fragment>
+
+    <main class="bg-[#050A09] min-h-screen">
+        <Hero client:load />
+        <Problem client:visible />
+        <Solution client:visible />
+        <Compliance client:visible />
+        <Menu client:visible />
+        <CaseStudy client:visible />
+        <FinalCTA client:visible />
+    </main>
+
+</Layout>

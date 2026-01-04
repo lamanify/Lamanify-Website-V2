@@ -1,0 +1,27 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Hero } from '../../components/dentist/Hero';
+import { Filter } from '../../components/dentist/Filter';
+import { Solution } from '../../components/dentist/Solution';
+import { Compliance } from '../../components/dentist/Compliance';
+import { Proof } from '../../components/dentist/Proof';
+import { WhyUs } from '../../components/dentist/WhyUs';
+import { FAQ } from '../../components/dentist/FAQ';
+import { FinalCTA } from '../../components/dentist/FinalCTA';
+---
+
+<Layout 
+    title="Dental Marketing Agency Malaysia | High-Value Patient Acquisition - Lamanify" 
+    description="We help Malaysian dental practices fill their chairs with Implant, Orthodontic, and Veneer cases using our compliant Patient Acquisition System."
+>
+    <main>
+        <Hero client:load />
+        <Filter client:visible />
+        <Solution client:visible />
+        <Compliance client:visible />
+        <Proof client:visible />
+        <WhyUs client:visible />
+        <FAQ client:visible />
+        <FinalCTA client:visible />
+    </main>
+</Layout>

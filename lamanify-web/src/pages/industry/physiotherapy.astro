@@ -1,0 +1,22 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Hero } from '../../components/physiotherapy/Hero';
+import { Problem } from '../../components/physiotherapy/Problem';
+import { Solution } from '../../components/physiotherapy/Solution';
+import { Compliance } from '../../components/physiotherapy/Compliance';
+import { Conditions } from '../../components/physiotherapy/Conditions';
+import { CaseStudy } from '../../components/physiotherapy/CaseStudy';
+import { FinalCTA } from '../../components/physiotherapy/FinalCTA';
+---
+
+<Layout title="Physiotherapy Marketing & Growth System | Lamanify" description="Attract committed patients for your Physio Center. We help you sell recovery plans, not just one-off sessions.">
+    <main class="bg-white min-h-screen">
+        <Hero client:load />
+        <Problem client:visible />
+        <Solution client:visible />
+        <Compliance client:visible />
+        <Conditions client:visible />
+        <CaseStudy client:visible />
+        <FinalCTA client:visible />
+    </main>
+</Layout>

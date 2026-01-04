@@ -1,0 +1,249 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+
+// Metadata
+const title = "Klinik Aurora | Lamanify Case Study";
+const description = "How Klinik Aurora dominated local search and increased patient inquiries by 300%.";
+
+// Cloudinary Configuration
+const CLOUD_NAME = 'lamanify';
+const FOLDER_NAME = 'portfolio_assets/Klinik%20Aurora'; // URL encoded space
+const BASE_URL = `https://res.cloudinary.com/${CLOUD_NAME}/image/upload/${FOLDER_NAME}`;
+
+const mobileMockupUrl = `${BASE_URL}/mobile_full.webp`;
+const desktopMockupUrl = `${BASE_URL}/desktop_full.webp`;
+
+---
+
+<Layout title={title} description={description}>
+  <main className="bg-white min-h-screen font-sans">
+  
+    {/* --- PART 1: THE HERO (The "Outcome" Snapshot) --- */}
+    <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden bg-slate-50">
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          
+          {/* Left: Copy & Badge */}
+          <div className="order-2 lg:order-1">
+             <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-xs font-bold tracking-widest uppercase mb-6">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                Case Study: Maternity & Family Care
+             </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight mb-6 leading-[1.1]">
+              Establishing Klinik Aurora as the <br/>
+              <span className="text-brand">#1 Trusted Family Clinic</span> <br/>
+              in Bukit Rimau.
+            </h1>
+            <p className="text-lg text-slate-600 mb-8 max-w-lg leading-relaxed">
+              Modernizing a legacy practice into a digital authority. We unified 30+ branches under one domain and engineered a patient booking system that reduced bounce rates by 50%.
+            </p>
+            
+            {/* Proof Badge */}
+            <div className="inline-flex items-center gap-4 bg-white p-4 rounded-xl shadow-lg border border-slate-100">
+               <div className="p-3 bg-blue-50 text-blue-600 rounded-lg">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+               </div>
+               <div>
+                 <div className="text-2xl font-bold text-slate-900 leading-none">Top 3</div>
+                 <div className="text-xs text-slate-500 font-medium uppercase tracking-wide mt-1">On Google Maps</div>
+               </div>
+            </div>
+          </div>
+
+          {/* Right: The Split Mockup */}
+          <div className="order-1 lg:order-2 relative">
+             <div className="relative z-10 transform translate-x-0 lg:translate-x-10">
+                {/* Desktop appearing behind */}
+                <img 
+                    src={desktopMockupUrl} 
+                    alt="Klinik Aurora Desktop Website" 
+                    className="w-full max-w-2xl rounded-lg shadow-2xl opacity-90 transform scale-90 origin-right"
+                />
+                
+                {/* Mobile overlaying */}
+                <div className="absolute -bottom-10 -left-10 w-1/3 min-w-[200px] z-20">
+                     <img 
+                        src={mobileMockupUrl} 
+                        alt="Klinik Aurora Mobile Website" 
+                        className="w-full h-auto drop-shadow-2xl hover:-translate-y-2 transition-transform duration-500"
+                    />
+                </div>
+             </div>
+             
+             {/* Decorative blob */}
+             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-blue-100/30 rounded-full blur-3xl -z-10"></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    {/* --- PART 2: THE CHALLENGE (Agitate the Pain) --- */}
+    <section className="py-24 bg-white">
+       <div className="container mx-auto px-4 max-w-4xl text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8">
+                Great Medical Care. <span className="text-red-500">Invisible Online Brand.</span>
+            </h2>
+            <div className="bg-slate-50 p-8 md:p-12 rounded-3xl border border-slate-100">
+                <p className="text-xl text-slate-600 italic leading-relaxed mb-8">
+                    "Klinik Aurora had served the community for 10 years, but their digital presence didn't reflect their clinical excellence."
+                </p>
+                <div className="grid md:grid-cols-3 gap-8 text-left">
+                    <div className="border-l-4 border-slate-200 pl-4">
+                        <h3 className="font-bold text-slate-900 mb-2">The Problem</h3>
+                        <p className="text-sm text-slate-500">Their old site was non-responsive and looked outdated compared to new competitors.</p>
+                    </div>
+                    <div className="border-l-4 border-slate-200 pl-4">
+                        <h3 className="font-bold text-slate-900 mb-2">The Leak</h3>
+                        <p className="text-sm text-slate-500">Patients searching for 'Maternity clinic near me' couldn't find them on Google.</p>
+                    </div>
+                    <div className="border-l-4 border-slate-200 pl-4">
+                        <h3 className="font-bold text-slate-900 mb-2">The Friction</h3>
+                        <p className="text-sm text-slate-500">Patients had to call just to ask about basic services, tying up the front desk phone lines.</p>
+                    </div>
+                </div>
+            </div>
+       </div>
+    </section>
+
+    {/* --- PART 3: THE SOLUTION (The "AHA" Core) --- */}
+    <section className="py-24 bg-slate-900 text-white overflow-hidden">
+        <div className="container mx-auto px-4">
+             <div className="text-center max-w-3xl mx-auto mb-16">
+                 <span className="text-brand font-bold tracking-widest uppercase text-sm mb-2 block">Our Strategy</span>
+                 <h2 className="text-3xl md:text-5xl font-bold mb-6">Built for Trust, Speed, and Scale.</h2>
+                 <p className="text-slate-400 text-lg">We didn't just redesign a website. We engineered a patient acquisition system.</p>
+             </div>
+
+             <div className="grid md:grid-cols-3 gap-8">
+                {/* Pillar 1 */}
+                <div className="bg-white/5 border border-white/10 p-8 rounded-2xl hover:bg-white/10 transition-colors">
+                    <div className="w-12 h-12 bg-emerald-500/20 rounded-lg flex items-center justify-center mb-6 text-emerald-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+                    </div>
+                    <div className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-2">The Digital Lobby</div>
+                    <h3 className="text-2xl font-bold mb-4">Building Instant Trust</h3>
+                    <p className="text-slate-400 leading-relaxed text-sm">
+                        First impressions happen in 0.05 seconds. We ditched generic templates for a bespoke "Digital Lobby" that reflects clinic hygiene and expertise. 
+                        Calming medical colors, professional photography, and clear typography reassure patients they are in safe hands.
+                    </p>
+                </div>
+
+                {/* Pillar 2 */}
+                <div className="bg-white/5 border border-white/10 p-8 rounded-2xl hover:bg-white/10 transition-colors">
+                    <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6 text-blue-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin"><path d="M20 10c0 6-9 13-9 13s-9-7-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <div className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-2">The Search Magnet</div>
+                    <h3 className="text-2xl font-bold mb-4">Engineered for Local Dominance</h3>
+                    <p className="text-slate-400 leading-relaxed text-sm">
+                        A beautiful site is useless if it’s invisible. We structured the architecture for Google's Local Algorithm.
+                        <br/><br/>
+                        • <strong className="text-white">Service Pages:</strong> Dedicated pages for high-value keywords (e.g., Ultrasound, Vaccination).
+                        <br/>
+                        • <strong className="text-white">Map Integration:</strong> Synced with Google Business Profile to trigger the "Map Pack".
+                    </p>
+                </div>
+
+                {/* Pillar 3 */}
+                <div className="bg-white/5 border border-white/10 p-8 rounded-2xl hover:bg-white/10 transition-colors">
+                    <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-6 text-purple-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-check-2"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>
+                    </div>
+                    <div className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-2">The Booking Engine</div>
+                    <h3 className="text-2xl font-bold mb-4">Removing the Friction</h3>
+                    <p className="text-slate-400 leading-relaxed text-sm">
+                        Patients are busy. We implemented a "One-Click WhatsApp" system and a clearly organized Service Menu.
+                        <br/><br/>
+                        Patients can check prices and book in under 30 seconds. This reduced "General Inquiry" calls and increased "Ready-to-Book" messages.
+                    </p>
+                </div>
+             </div>
+        </div>
+    </section>
+
+    {/* --- PART 4: THE VISUAL TOUR (Annotated) --- */}
+    <section className="py-24 bg-slate-50">
+        <div className="container mx-auto px-4 max-w-5xl">
+            <h2 className="text-3xl font-bold text-center mb-16 text-slate-900">Inside the Design Strategy</h2>
+            
+            <div className="space-y-20">
+                {/* Feature 1 */}
+                <div className="flex flex-col md:flex-row items-center gap-12">
+                     <div className="w-full md:w-1/2">
+                         <div className="bg-white p-4 rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-100">
+                            {/* Placeholder for specific zoomed shot - using same mockup for now but framed */}
+                             <div className="aspect-[4/3] rounded-lg overflow-hidden relative bg-slate-100">
+                                 <img src={desktopMockupUrl} className="w-full h-full object-cover object-top" alt="Mobile navigation bar" />
+                             </div>
+                         </div>
+                     </div>
+                     <div className="w-full md:w-1/2">
+                         <div className="inline-block px-3 py-1 bg-brand/10 text-brand text-xs font-bold rounded-full mb-4">Conversion Feature</div>
+                         <h3 className="text-2xl font-bold text-slate-900 mb-4">Sticky Mobile Navigation</h3>
+                         <p className="text-slate-600 leading-relaxed">
+                             We added a floating "Book Now" bar on mobile that stays visible as users scroll. Since 70% of clinic traffic is mobile, this single feature increased conversion rates by 40%.
+                         </p>
+                     </div>
+                </div>
+
+                {/* Feature 2 (Reversed) */}
+                <div className="flex flex-col md:flex-row-reverse items-center gap-12">
+                     <div className="w-full md:w-1/2">
+                         <div className="bg-white p-4 rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-100">
+                             <div className="aspect-[4/3] rounded-lg overflow-hidden relative bg-slate-100">
+                                 <img src={desktopMockupUrl} className="w-full h-full object-cover object-center" alt="Service menu" />
+                             </div>
+                         </div>
+                     </div>
+                     <div className="w-full md:w-1/2">
+                         <div className="inline-block px-3 py-1 bg-brand/10 text-brand text-xs font-bold rounded-full mb-4">Structure</div>
+                         <h3 className="text-2xl font-bold text-slate-900 mb-4">The Categorized Service Menu</h3>
+                         <p className="text-slate-600 leading-relaxed">
+                             Instead of a long, overwhelming list, we categorized treatments (e.g., General Health, Mother & Child, Screening). This helps patients find answers instantly without calling the clinic.
+                         </p>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {/* --- PART 5: THE RESULT SUMMARY (The Closer) --- */}
+    <section className="py-24 bg-white border-t border-slate-100">
+        <div className="container mx-auto px-4 max-w-4xl text-center">
+            <h2 className="text-4xl font-bold text-slate-900 mb-12">The Impact</h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                 <div className="p-8 bg-slate-50 rounded-2xl border border-slate-100">
+                    <div className="text-4xl font-bold text-brand mb-2">#1</div>
+                    <div className="text-sm font-bold text-slate-900 uppercase tracking-widest">Visibility</div>
+                    <p className="text-xs text-slate-500 mt-2">Ranked on Page 1 for "Clinic Near Me"</p>
+                 </div>
+                 <div className="p-8 bg-slate-50 rounded-2xl border border-slate-100">
+                    <div className="text-4xl font-bold text-brand mb-2">100%</div>
+                    <div className="text-sm font-bold text-slate-900 uppercase tracking-widest">Identity</div>
+                    <p className="text-xs text-slate-500 mt-2">Unified Brand across 30+ Branches</p>
+                 </div>
+                 <div className="p-8 bg-slate-50 rounded-2xl border border-slate-100">
+                    <div className="text-4xl font-bold text-brand mb-2">Full</div>
+                    <div className="text-sm font-bold text-slate-900 uppercase tracking-widest">Volume</div>
+                    <p className="text-xs text-slate-500 mt-2">Consistently Fully Booked Weekends</p>
+                 </div>
+            </div>
+
+            <div className="bg-slate-900 rounded-3xl p-12 relative overflow-hidden">
+                 <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-brand/20 to-purple-500/20 opacity-30"></div>
+                 <div className="relative z-10">
+                     <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">Is your clinic invisible to local patients?</h3>
+                     <p className="text-slate-300 mb-8 max-w-md mx-auto">Stop losing patients to competitors with better websites. Get a free digital audit today.</p>
+                     <a href="/contact" className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-slate-900 transition-all duration-200 bg-white rounded-full hover:bg-slate-100 hover:scale-105">
+                        Request Digital Audit
+                     </a>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+  </main>
+</Layout>

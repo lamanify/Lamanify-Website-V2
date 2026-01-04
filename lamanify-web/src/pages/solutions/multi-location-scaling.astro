@@ -1,0 +1,429 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Button } from '../../components/ui/Button';
+import { Network, BarChart3, Users, Building2, ShieldCheck, Database, LayoutTemplate, MapPin, Layers } from 'lucide-react';
+
+const title = "Multi-Location Scaling Solution - Centralize Your Growth | Lamanify";
+const description = "Scale your clinic group with Lamanify's centralized infrastructure. Lower CPA, unify brand voice, and manage multiple branches effortlessly.";
+---
+
+<Layout title={title} description={description}>
+  <main class="overflow-hidden">
+    <!-- 1. Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-slate-50 overflow-hidden">
+      <div class="absolute inset-0 z-0 opacity-40">
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+      </div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+          <span class="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-700 font-semibold text-sm mb-6 fade-up">
+            MARKETING FOR CLINIC GROUPS & CHAINS
+          </span>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight mb-6 fade-up" style="animation-delay: 100ms;">
+             Scale Your Network. <br class="hidden md:block" />
+             <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Centralize Your Growth.</span>
+          </h1>
+          <p class="text-lg md:text-xl text-slate-600 mb-8 max-w-2xl mx-auto fade-up" style="animation-delay: 200ms;">
+            Growing from 1 to 10 locations breaks most marketing strategies. We provide the <strong>Centralized Infrastructure</strong> you need to manage multiple branches, unify your brand voice, and lower your aggregate Cost Per Acquisition.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center fade-up" style="animation-delay: 300ms;">
+            <Button client:load href="/contact" variant="primary" size="lg" className="bg-blue-600 hover:bg-blue-700 shadow-blue-200">
+              Discuss Enterprise Strategy →
+            </Button>
+            <p class="text-sm text-slate-500 italic mt-2 sm:mt-0">
+              Specialized support for multi-branch Dental, GP, and Aesthetic groups.
+            </p>
+          </div>
+        </div>
+
+        <!-- Visual Representation: Map with Hub & Spoke -->
+        <div class="mt-20 relative mx-auto max-w-4xl fade-up" style="animation-delay: 400ms;">
+             <div class="aspect-[16/9] md:aspect-[21/9] bg-white rounded-2xl shadow-2xl border border-slate-200 relative overflow-hidden flex items-center justify-center p-8">
+                <!-- Abstract Map Background -->
+                <div class="absolute inset-0 z-0">
+                    <svg class="w-full h-full text-slate-100 fill-current" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <path d="M0 0h100v100H0z" fill="none"/>
+                        <!-- Stylized Malaysia Map Shape Placeholder (Abstract) -->
+                        <path d="M10,50 Q30,20 50,50 T90,50" stroke="currentColor" stroke-width="2" fill="none" class="opacity-30" />
+                        <path d="M15,60 Q35,30 55,60 T95,60" stroke="currentColor" stroke-width="2" fill="none" class="opacity-20" />
+                    </svg>
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-50/50 via-transparent to-transparent"></div>
+                </div>
+
+                <!-- Hub -->
+                <div class="relative z-20 flex flex-col items-center">
+                    <div class="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center shadow-lg shadow-blue-500/40 relative z-20 animate-pulse-slow">
+                        <Building2 class="text-white w-8 h-8" />
+                    </div>
+                    <div class="mt-2 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-blue-800 shadow-sm border border-blue-100 z-20">HQ Command</div>
+                    
+                    <!-- Connection Lines -->
+                     <svg class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[600px] md:h-[600px] z-10 pointer-events-none overflow-visible">
+                        <g stroke="currentColor" class="text-blue-300" stroke-width="2" stroke-dasharray="6 4">
+                            <!-- Left Branch -->
+                            <line x1="50%" y1="50%" x2="20%" y2="70%" />
+                            <!-- Right Branch -->
+                            <line x1="50%" y1="50%" x2="80%" y2="30%" />
+                            <!-- Top Branch -->
+                            <line x1="50%" y1="50%" x2="60%" y2="10%" />
+                             <!-- Bottom Branch -->
+                            <line x1="50%" y1="50%" x2="40%" y2="90%" />
+                        </g>
+                    </svg>
+
+                     <!-- Spoke 1 (Left) -->
+                    <div class="absolute -bottom-16 -left-32 md:-bottom-24 md:-left-64 flex flex-col items-center group">
+                         <div class="w-12 h-12 bg-white border-2 border-blue-400 rounded-full flex items-center justify-center shadow-md z-20 group-hover:scale-110 transition-transform">
+                             <MapPin class="text-blue-500 w-5 h-5" />
+                         </div>
+                         <div class="mt-1 bg-white/90 px-2 py-0.5 rounded text-[10px] font-semibold text-slate-600 shadow-sm">Branch A</div>
+                         <div class="absolute -top-8 right-0 bg-green-100 text-green-700 text-[9px] px-1.5 py-0.5 rounded-sm opacity-0 group-hover:opacity-100 transition-opacity">Active</div>
+                    </div>
+
+                    <!-- Spoke 2 (Right) -->
+                    <div class="absolute -top-24 -right-28 md:-top-32 md:-right-56 flex flex-col items-center group">
+                         <div class="w-12 h-12 bg-white border-2 border-blue-400 rounded-full flex items-center justify-center shadow-md z-20 group-hover:scale-110 transition-transform">
+                             <MapPin class="text-blue-500 w-5 h-5" />
+                         </div>
+                         <div class="mt-1 bg-white/90 px-2 py-0.5 rounded text-[10px] font-semibold text-slate-600 shadow-sm">Branch B</div>
+                          <div class="absolute -top-8 left-0 bg-green-100 text-green-700 text-[9px] px-1.5 py-0.5 rounded-sm opacity-0 group-hover:opacity-100 transition-opacity">Active</div>
+                    </div>
+
+                     <!-- Spoke 3 (Top) -->
+                    <div class="absolute -top-32 left-12 md:-top-48 md:left-24 flex flex-col items-center group">
+                         <div class="w-12 h-12 bg-white border-2 border-slate-300 rounded-full flex items-center justify-center shadow-md z-20 group-hover:scale-110 transition-transform">
+                             <MapPin class="text-slate-400 w-5 h-5" />
+                         </div>
+                         <div class="mt-1 bg-white/90 px-2 py-0.5 rounded text-[10px] font-semibold text-slate-600 shadow-sm">Opening Soon</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. The Problem: "The Fragmentation Trap" -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center mb-16 fade-up">
+            <h2 class="text-3xl font-bold text-slate-900 mb-4">Is Your Growth Creating Marketing Chaos?</h2>
+            <p class="text-lg text-slate-600">
+                As you open more branches, complexity explodes. You don't need "more ads." You need a <strong>Scalable Architecture</strong> that allows you to plug in a new branch without breaking the system.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+             <!-- Problem 1 -->
+            <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 hover:border-red-100 hover:shadow-md transition-all fade-up">
+                <div class="w-10 h-10 bg-red-100 text-red-600 rounded-lg flex items-center justify-center mb-4">
+                    <Layers size={20} />
+                </div>
+                <h3 class="font-bold text-slate-900 mb-2">Inconsistent Branding</h3>
+                <p class="text-sm text-slate-600">Branch A runs a promo that Branch B knows nothing about, confusing your patients.</p>
+            </div>
+
+            <!-- Problem 2 -->
+             <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 hover:border-red-100 hover:shadow-md transition-all fade-up" style="animation-delay: 100ms;">
+                <div class="w-10 h-10 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center mb-4">
+                    <BarChart3 size={20} />
+                </div>
+                <h3 class="font-bold text-slate-900 mb-2">Reporting Nightmares</h3>
+                <p class="text-sm text-slate-600">Drowning in spreadsheets, trying to consolidate data from 10 different ad accounts.</p>
+            </div>
+
+             <!-- Problem 3 -->
+             <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 hover:border-red-100 hover:shadow-md transition-all fade-up" style="animation-delay: 200ms;">
+                <div class="w-10 h-10 bg-yellow-100 text-yellow-600 rounded-lg flex items-center justify-center mb-4">
+                    <Users size={20} />
+                </div>
+                <h3 class="font-bold text-slate-900 mb-2">Vendor Fatigue</h3>
+                <p class="text-sm text-slate-600">Dealing with different freelancers for different locations is a management full-time job.</p>
+            </div>
+
+             <!-- Problem 4 -->
+            <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 hover:border-red-100 hover:shadow-md transition-all fade-up" style="animation-delay: 300ms;">
+                <div class="w-10 h-10 bg-slate-200 text-slate-700 rounded-lg flex items-center justify-center mb-4">
+                    <Network size={20} />
+                </div>
+                <h3 class="font-bold text-slate-900 mb-2">Cannibalization</h3>
+                <p class="text-sm text-slate-600">Your own branches competing against each other for the same keywords, driving up costs.</p>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. The Solution: "Hub & Spoke" Model -->
+    <section class="py-24 bg-slate-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-up">
+                <span class="text-blue-600 font-bold tracking-wider uppercase text-sm mb-2 block">Our Enterprise Strategy</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-slate-900">One Brain. Many Limbs.</h2>
+            </div>
+
+            <div class="max-w-6xl mx-auto space-y-24">
+                
+                <!-- Strategy 1 -->
+                <div class="flex flex-col lg:flex-row items-center gap-12 fade-up">
+                    <div class="w-full lg:w-1/2 order-2 lg:order-1">
+                        <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 relative overflow-hidden">
+                             <!-- Visual: File structure/Hierarchy -->
+                             <div class="space-y-3 font-mono text-sm text-slate-500">
+                                 <div class="flex items-center gap-2 p-2 bg-blue-50 rounded text-blue-800 border-l-4 border-blue-500">
+                                     <span class="font-bold">brand.com</span> (Authority Hub)
+                                 </div>
+                                  <div class="ml-8 flex items-center gap-2 p-2 bg-slate-50 rounded border-l-2 border-slate-300">
+                                     <span>└── /locations/kuala-lumpur</span>
+                                 </div>
+                                  <div class="ml-8 flex items-center gap-2 p-2 bg-slate-50 rounded border-l-2 border-slate-300">
+                                     <span>└── /locations/penang</span>
+                                 </div>
+                                  <div class="ml-8 flex items-center gap-2 p-2 bg-green-50 rounded text-green-800 border-l-2 border-green-500">
+                                     <span>└── /locations/johor-bahru</span> (New!)
+                                 </div>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2 order-1 lg:order-2">
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6">
+                            <span class="font-bold text-xl">1</span>
+                        </div>
+                        <h3 class="text-3xl font-bold text-slate-900 mb-4">Enterprise SEO Architecture</h3>
+                        <p class="text-lg text-slate-600 mb-6">
+                            <strong>The Goal:</strong> Transfer authority from your main brand to your local branches.
+                        </p>
+                        <p class="text-slate-600">
+                            We restructure your website using a "Hub (Brand) → Spoke (Location Pages)" hierarchy. This ensures that when you launch a new branch, it instantly inherits the SEO power of your parent domain, ranking faster on Google Maps than if it were a standalone site.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Strategy 2 -->
+                <div class="flex flex-col lg:flex-row items-center gap-12 fade-up">
+                     <div class="w-full lg:w-1/2">
+                        <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center mb-6">
+                            <span class="font-bold text-xl">2</span>
+                        </div>
+                        <h3 class="text-3xl font-bold text-slate-900 mb-4">Unified Ad Ecosystem</h3>
+                        <p class="text-lg text-slate-600 mb-6">
+                            <strong>The Goal:</strong> Lower Group-Wide CPA.
+                        </p>
+                        <p class="text-slate-600">
+                            We consolidate audience data. If a user visits your "Kuala Lumpur" page but lives in "Shah Alam," we retarget them with ads for your Shah Alam branch. We use "Negative Location Exclusion" to ensure your branches don't bid against each other, saving you budget.
+                        </p>
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                         <div class="bg-indigo-900 p-8 rounded-2xl shadow-lg text-white relative">
+                            <div class="absolute top-4 right-4 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">ACTIVE</div>
+                            <div class="space-y-4">
+                                <div class="flex items-center justify-between border-b border-indigo-700 pb-2">
+                                    <span>Audience Pool</span>
+                                    <span class="font-mono text-indigo-300">142,000 users</span>
+                                </div>
+                                <div class="flex gap-2 text-sm text-indigo-200">
+                                    <div class="flex-1 bg-indigo-800 p-2 rounded">
+                                        <div class="text-xs uppercase text-indigo-400">Visitor Location</div>
+                                        <div class="font-bold">Shah Alam</div>
+                                    </div>
+                                    <div class="flex items-center text-indigo-400">→</div>
+                                    <div class="flex-1 bg-indigo-800 p-2 rounded">
+                                        <div class="text-xs uppercase text-indigo-400">Ad Served</div>
+                                        <div class="font-bold text-white">Shah Alam Branch Offer</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Strategy 3 -->
+                 <div class="flex flex-col lg:flex-row items-center gap-12 fade-up">
+                    <div class="w-full lg:w-1/2 order-2 lg:order-1">
+                        <div class="bg-white p-6 rounded-2xl shadow-xl border border-slate-200">
+                             <div class="flex items-center justify-between mb-6">
+                                 <h4 class="font-bold text-slate-800">Agency OS: Group Performance</h4>
+                                 <div class="text-xs text-slate-400">Real-time</div>
+                             </div>
+                             <div class="space-y-3">
+                                 <div class="flex items-center justify-between p-3 bg-slate-50 rounded-lg border border-slate-100">
+                                     <div class="flex items-center gap-3">
+                                         <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                                         <span class="text-sm font-medium">Group Total CPA</span>
+                                     </div>
+                                     <span class="font-bold text-slate-900">RM 42.50</span>
+                                 </div>
+                                  <div class="flex items-center justify-between p-3 bg-slate-50 rounded-lg border border-slate-100">
+                                     <div class="flex items-center gap-3">
+                                         <div class="w-2 h-2 rounded-full bg-orange-500"></div>
+                                         <span class="text-sm font-medium">Branch C (Needs Attn)</span>
+                                     </div>
+                                     <span class="font-bold text-orange-600">RM 86.20</span>
+                                 </div>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2 order-1 lg:order-2">
+                        <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-lg flex items-center justify-center mb-6">
+                            <span class="font-bold text-xl">3</span>
+                        </div>
+                        <h3 class="text-3xl font-bold text-slate-900 mb-4">Centralized Command Center</h3>
+                        <p class="text-lg text-slate-600 mb-6">
+                            <strong>The Goal:</strong> Clarity for the CEO/Directors.
+                        </p>
+                        <p class="text-slate-600">
+                            A single dashboard that shows the health of the entire group <em>and</em> drills down to individual branch performance. Spot the underperforming locations instantly without logging into 10 different accounts.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Playbook Section: "Speed to Market" -->
+    <section class="py-20 bg-slate-900 text-white relative overflow-hidden">
+         <div class="absolute inset-0 bg-[url('https://res.cloudinary.com/lamanify/image/upload/v1679982361/grid-pattern-dark.png')] opacity-10"></div>
+         
+         <div class="container mx-auto px-4 relative z-10">
+             <div class="max-w-4xl mx-auto text-center mb-16 fade-up">
+                 <h2 class="text-3xl md:text-4xl font-bold mb-4">The "Cookie-Cutter" Launch System.</h2>
+                 <p class="text-slate-400 text-lg">
+                     Stop reinventing the wheel every time you sign a new tenancy agreement. We have pre-built the digital assets for your expansion.
+                 </p>
+             </div>
+
+             <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                 <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 hover:border-blue-500 transition-colors fade-up">
+                     <LayoutTemplate class="text-blue-400 w-10 h-10 mb-4" />
+                     <h3 class="text-xl font-bold text-white mb-2">Plug & Play Assets</h3>
+                     <p class="text-slate-400 text-sm">We don't build from scratch. We duplicate our winning high-converting landing sheets and campaign structures for the new location instantly.</p>
+                 </div>
+
+                 <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 hover:border-blue-500 transition-colors fade-up" style="animation-delay: 100ms;">
+                     <MapPin class="text-blue-400 w-10 h-10 mb-4" />
+                     <h3 class="text-xl font-bold text-white mb-2">Instant Verification</h3>
+                     <p class="text-slate-400 text-sm">We have a streamlined process for accelerated Google Business Profile verification for new addresses, often before signage is even up.</p>
+                 </div>
+
+                  <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 hover:border-blue-500 transition-colors fade-up" style="animation-delay: 200ms;">
+                     <Users class="text-blue-400 w-10 h-10 mb-4" />
+                     <h3 class="text-xl font-bold text-white mb-2">Pre-Opening Lead Gen</h3>
+                     <p class="text-slate-400 text-sm">We generate bookings for Branch #5 while the renovation is still happening, ensuring you open with revenue.</p>
+                 </div>
+             </div>
+         </div>
+    </section>
+
+    <!-- 5. Compliance: Brand Safety -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+             <div class="flex flex-col md:flex-row items-center gap-12 max-w-6xl mx-auto">
+                <div class="w-full md:w-1/2 fade-up">
+                    <div class="bg-blue-50 p-8 rounded-3xl border border-blue-100">
+                        <ShieldCheck class="w-16 h-16 text-blue-600 mb-6" />
+                        <h2 class="text-3xl font-bold text-slate-900 mb-4">Brand Safety Across The Network.</h2>
+                        <ul class="space-y-4 mt-8">
+                             <li class="flex items-start gap-4">
+                                <div class="w-6 h-6 rounded-full bg-blue-200 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <div class="w-2 h-2 rounded-full bg-blue-600"></div>
+                                </div>
+                                <div>
+                                    <strong class="text-slate-900 block">Central Approval</strong>
+                                    <span class="text-sm text-slate-600">We ensure that no branch manager posts "unapproved" copy that violates KKLIU or MOH guidelines.</span>
+                                </div>
+                            </li>
+                             <li class="flex items-start gap-4">
+                                <div class="w-6 h-6 rounded-full bg-blue-200 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <div class="w-2 h-2 rounded-full bg-blue-600"></div>
+                                </div>
+                                <div>
+                                    <strong class="text-slate-900 block">Uniform Messaging</strong>
+                                    <span class="text-sm text-slate-600">Maintaining strict brand guidelines so your premium image remains consistent, whether the patient is in Bangsar or Johor Bahru.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 fade-up" style="animation-delay: 200ms;">
+                     <div class="prose prose-lg text-slate-600">
+                        <h3 class="text-slate-900 font-bold">One rogue branch can get the whole group sued.</h3>
+                        <p>
+                            Managing compliance for one clinic is hard. Managing it for 10 is a full-time job. 
+                        </p>
+                        <p>
+                             When you scale, "ad hoc" marketing becomes a liability. We act as the brand guardians, ensuring every piece of content that goes out is not just high-converting, but also 100% compliant and brand-aligned.
+                        </p>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Case Study -->
+    <section class="py-20 bg-slate-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 md:p-12 border border-slate-700 shadow-2xl fade-up">
+                <span class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full mb-6 inline-block">CASE STUDY</span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-8">Scaling from 3 to 8 Locations.</h2>
+
+                <div class="grid md:grid-cols-2 gap-12">
+                     <div class="space-y-6">
+                         <div>
+                             <h4 class="text-slate-400 text-sm font-bold uppercase tracking-wider mb-2">Challenge</h4>
+                             <p class="text-slate-300">
+                                 Client was acquiring smaller clinics and rebranding them. Marketing was fragmented, with 8 different Facebook pages, no central data, and costs were spiraling.
+                             </p>
+                         </div>
+                          <div>
+                             <h4 class="text-slate-400 text-sm font-bold uppercase tracking-wider mb-2">Solution</h4>
+                             <p class="text-slate-300">
+                                 Lamanify implemented a <strong class="text-white">Unified Domain Strategy</strong> and a Central CRM. We consolidated ad budgets to target "clusters" of patients rather than overlapping targeting.
+                             </p>
+                         </div>
+                     </div>
+
+                     <div class="bg-slate-950/50 rounded-2xl p-6 border border-slate-700/50">
+                         <div class="grid gap-6">
+                              <div class="flex items-end justify-between border-b border-slate-800 pb-4">
+                                  <span class="text-slate-400">CPA Reduction</span>
+                                  <span class="text-3xl font-bold text-green-400">-35%</span>
+                              </div>
+                               <div class="flex items-end justify-between border-b border-slate-800 pb-4">
+                                  <span class="text-slate-400">Parent Domain Traffic</span>
+                                  <span class="text-3xl font-bold text-blue-400">+120%</span>
+                              </div>
+                               <div class="flex items-end justify-between">
+                                  <span class="text-slate-400">Reporting Time Saved</span>
+                                  <span class="text-3xl font-bold text-white">20 Hrs/Wk</span>
+                              </div>
+                         </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Final CTA -->
+    <section class="py-24 bg-white relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+             <div class="absolute top-1/2 left-1/2 w-[800px] h-[800px] bg-gradient-to-tr from-blue-100/50 to-indigo-100/50 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10 text-center fade-up">
+            <h2 class="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight">Ready to Build Your Empire?</h2>
+            <p class="text-xl text-slate-600 mb-10 max-w-2xl mx-auto">
+                Stop managing your clinics like a collection of small businesses. Start operating like an enterprise.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Button client:load href="/contact" variant="primary" size="lg" className="bg-blue-600 hover:bg-blue-700 shadow-xl shadow-blue-600/20 px-8 py-6 text-lg">
+                    Book an Enterprise Consultation
+                </Button>
+            </div>
+            <p class="mt-6 text-sm text-slate-500">
+                Let’s discuss your 12-month expansion map.
+            </p>
+        </div>
+    </section>
+  </main>
+</Layout>

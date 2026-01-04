@@ -1,0 +1,29 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Hero } from '../../components/aesthetic/Hero';
+import { Problem } from '../../components/aesthetic/Problem';
+import { Solution } from '../../components/aesthetic/Solution';
+import { Compliance } from '../../components/aesthetic/Compliance';
+import { Services } from '../../components/aesthetic/Services';
+import { CaseStudy } from '../../components/aesthetic/CaseStudy';
+import { FinalCTA } from '../../components/aesthetic/FinalCTA';
+
+---
+
+<Layout title="Aesthetic Growth Accelerator | Lamanify" description="Attract high-value patients for your aesthetic clinic. Compliant, high-ticket patient acquisition for LCP holders.">
+    <!-- Injecting Playfair Display for this page specifically to ensure the vibe -->
+    <Fragment slot="head">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    </Fragment>
+
+    <main class="bg-[#121212] min-h-screen text-white">
+        <Hero client:load />
+        <Problem client:visible />
+        <Solution client:visible />
+        <Compliance client:visible />
+        <Services client:visible />
+        <CaseStudy client:visible />
+        <FinalCTA client:visible />
+    </main>
+
+</Layout>

@@ -1,0 +1,31 @@
+---
+import { Button } from '../ui/Button';
+import { ArrowRight } from 'lucide-react';
+---
+
+<section class="py-24 bg-slate-900 relative overflow-hidden">
+  <!-- Background Glows -->
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-full bg-brand/20 blur-[120px] pointer-events-none"></div>
+
+  <div class="container mx-auto px-4 relative z-10 text-center">
+    
+    <h2 class="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight">
+        Ready to Hyperscale Your Practice?
+    </h2>
+    
+    <p class="text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+        Stop wasting budget on marketing that doesn't convert. Partner with the agency that understands the business of healthcare.
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+        <Button client:load className="w-full sm:w-auto px-10 py-5 text-xl font-bold rounded-full bg-brand hover:bg-brand-dark shadow-xl hover:shadow-brand/30 hover:scale-105 active:scale-95 transition-all">
+            Get Your Free Growth Audit
+        </Button>
+    </div>
+    
+    <p class="mt-6 text-slate-500 text-sm">
+        *(Includes a review of your current SEO, Ads, and Website performance)
+    </p>
+
+  </div>
+</section>

@@ -20,39 +20,39 @@ interface Industry {
 const industries: Industry[] = [
     {
         icon: Stethoscope,
-        title: 'Dental Practices',
+        title: 'Dentist',
         description: 'General, Ortho, and Cosmetic dentistry growth strategies.',
-        href: '/industries/dental'
-    },
-    {
-        icon: Sparkles,
-        title: 'Aesthetic & Dermatology',
-        description: 'High-ticket lead generation with a visual focus.',
-        href: '/industries/aesthetic-dermatology'
+        href: '/industry/dentist'
     },
     {
         icon: User,
-        title: 'General Practitioners (GP)',
+        title: 'GP',
         description: 'Volume-based growth and local SEO dominance.',
-        href: '/industries/general-practitioners'
+        href: '/industry/gp'
+    },
+    {
+        icon: Sparkles,
+        title: 'Aesthetic',
+        description: 'High-ticket lead generation with a visual focus.',
+        href: '/industry/aesthetic'
     },
     {
         icon: Heart,
-        title: 'Specialist Centers',
-        description: 'Specialized marketing for ENT, Cardiology, and Paediatrics.',
-        href: '/industries/specialists'
+        title: 'Wellness & Spa',
+        description: 'Experience & retention strategies for luxury wellness.',
+        href: '/industry/wellness-spa'
     },
     {
         icon: Activity,
-        title: 'Allied Health',
-        description: 'Solutions for Physio, Chiro, and Mental Health clinics.',
-        href: '/industries/allied-health'
+        title: 'Physiotherapy',
+        description: 'Sell recovery plans, not just one-off sessions.',
+        href: '/industry/physiotherapy'
     },
     {
         icon: Building2,
-        title: 'Clinic Groups & Chains',
-        description: 'Enterprise-level scaling for multi-branch operations.',
-        href: '/industries/clinic-groups'
+        title: 'Specialist/consultant',
+        description: 'Prestige-focused marketing for expert consultants.',
+        href: '/industry/specialist-consultant'
     },
 ];
 

@@ -1,10 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Hero from '../components/sections/Hero.astro'; // Astro
+import Hero from '../components/sections/Hero.astro';
 import ProblemSection from '../components/sections/ProblemSection.astro';
-import { MethodologySection } from '../components/sections/MethodologySection';
-import PricingCalculator from '../components/PricingCalculator';
-import { FAQ } from '../components/sections/FAQ';
+import CapabilitiesSection from '../components/sections/CapabilitiesSection.astro';
+import { ResultsSection } from '../components/sections/ResultsSection';
+import WhyUsSection from '../components/sections/WhyUsSection.astro';
+import CTASection from '../components/sections/CTASection.astro';
 import { supabase } from '../lib/supabase';
 
 // Example: Fetching client logos or testimonials from Supabase for SSG
@@ -19,60 +20,13 @@ import { supabase } from '../lib/supabase';
     <div id="benefits">
       <ProblemSection />
     </div>
-    
-    <div id="solutions">
-      <MethodologySection client:visible />
-    </div>
-    
-    <section class="py-24 bg-white" id="features">
-      <div class="container mx-auto px-4">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <h2 class="text-3xl font-bold text-slate-900 mb-4">Everything you need to grow</h2>
-          <p class="text-lg text-slate-600">We don't just build websites. We build growth engines that drive traffic and convert visitors.</p>
-        </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="p-8 border border-slate-100 rounded-2xl bg-slate-50 hover:border-brand/20 hover:shadow-lg hover:shadow-brand/5 transition-all duration-300">
-                <div class="h-12 w-12 bg-brand/10 rounded-lg flex items-center justify-center mb-6">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h3 class="font-bold text-xl mb-3 text-slate-900">SEO Native</h3>
-                <p class="text-slate-600 leading-relaxed">Built on Astro for perfect Core Web Vitals. Your site will load in milliseconds, not seconds.</p>
-             </div>
-             <div class="p-8 border border-slate-100 rounded-2xl bg-slate-50 hover:border-brand/20 hover:shadow-lg hover:shadow-brand/5 transition-all duration-300">
-                <div class="h-12 w-12 bg-brand/10 rounded-lg flex items-center justify-center mb-6">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
-                  </svg>
-                </div>
-                <h3 class="font-bold text-xl mb-3 text-slate-900">High Conversion</h3>
-                <p class="text-slate-600 leading-relaxed">Designed psychologically to convert visitors into patients. Clear CTAs and trust signals.</p>
-             </div>
-             <div class="p-8 border border-slate-100 rounded-2xl bg-slate-50 hover:border-brand/20 hover:shadow-lg hover:shadow-brand/5 transition-all duration-300">
-                <div class="h-12 w-12 bg-brand/10 rounded-lg flex items-center justify-center mb-6">
-                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <h3 class="font-bold text-xl mb-3 text-slate-900">Mobile First</h3>
-                <p class="text-slate-600 leading-relaxed">Over 70% of patients book on mobile. We ensure a flawless experience on every device.</p>
-             </div>
-        </div>
-      </div>
-    </section>
+    <CapabilitiesSection />
 
-    <section class="py-20 bg-slate-50" id="pricing">
-      <div class="container mx-auto px-4">
-        <div class="text-center max-w-3xl mx-auto mb-12">
-           <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-4 tracking-tight">Transparent Pricing</h2>
-           <p class="text-xl text-slate-600 max-w-2xl mx-auto">No hidden fees. Just clear, upfront costs for your growth engine.</p>
-        </div>
-        <PricingCalculator client:visible />
-      </div>
-    </section>
+    <ResultsSection client:visible />
 
-    <FAQ client:visible />
+    <WhyUsSection />
+
+    <CTASection />
   </main>
 </Layout>

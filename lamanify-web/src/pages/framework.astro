@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FrameworkHero from '../components/sections/framework/FrameworkHero.astro';
+import ComparisonSection from '../components/sections/framework/ComparisonSection.astro';
+import PhasesSection from '../components/sections/framework/PhasesSection.astro';
+import AgencyOSSection from '../components/sections/framework/AgencyOSSection.astro';
+import GuaranteeSection from '../components/sections/framework/GuaranteeSection.astro';
+import FrameworkCTA from '../components/sections/framework/FrameworkCTA.astro';
+
+const seoTitle = "The GrowthBooster Framework™ | Engineering Patient Growth";
+const seoDescription = "We don't just run ads. We install a proven, data-driven revenue engine into your clinic. Discover the GrowthBooster Framework™.";
+---
+
+<Layout title={seoTitle} description={seoDescription}>
+  <main>
+    <FrameworkHero />
+    <ComparisonSection />
+    <PhasesSection />
+    <AgencyOSSection />
+    <GuaranteeSection />
+    <FrameworkCTA />
+  </main>
+</Layout>

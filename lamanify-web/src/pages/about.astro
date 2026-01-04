@@ -1,171 +1,150 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Button } from '../components/ui/Button';
-import { Star, Heart, Lightbulb, ShieldCheck, ArrowRight } from 'lucide-react';
+import { 
+    Cpu, 
+    Activity, 
+    ShieldCheck, 
+    ArrowRight, 
+    Ban, 
+    Target, 
+    Users,
+    LineChart
+} from 'lucide-react';
 
-const values = [
+const philosophy = [
     {
-        title: "Excellence",
-        description: "By giving attention to every detail, we create websites that far surpass the status quo. We give you only the best we can humanly create–because it’s just the right thing to do.",
-        icon: Star,
+        title: "Data Over Opinions.",
+        description: "We don't care which color we like. We care which color converts. Every decision we make for your clinic, from website layout to ad copy, is backed by real-time data and A/B testing. If it doesn't drive bookings, we kill it.",
+        icon: LineChart,
         color: "text-brand",
         bg: "bg-brand/10"
     },
     {
-        title: "Partnership",
-        description: "Much like a trusted friend, we’re ready to go the extra mile. We are here for you, striving to put your best interests first—regardless of project size or budget.",
-        icon: Heart,
-        color: "text-rose-500",
-        bg: "bg-rose-50"
-    },
-    {
-        title: "Creativity",
-        description: "To us, creativity is problem solving, and we believe in solving the impossible. We never settle for the first, easiest, or quickest solution.",
-        icon: Lightbulb,
-        color: "text-amber-500",
-        bg: "bg-amber-50"
-    },
-    {
-        title: "Integrity",
-        description: "Keeping our promises to you demonstrates our integrity. We also seek to maintain a spirit of transparent honesty in everything we do.",
+        title: "Compliance is Non-Negotiable.",
+        description: "In the US, it’s HIPAA. In Malaysia, it’s KKLIU and the MOH Acts. We understand the regulatory minefield you operate in. We ensure your growth never comes at the cost of your medical license.",
         icon: ShieldCheck,
         color: "text-emerald-500",
         bg: "bg-emerald-50"
+    },
+    {
+        title: "Technology-Enabled Growth.",
+        description: "We leverage proprietary tools and automation (our 'Agency OS') to track lead quality. While other agencies report 'clicks,' we report 'verified appointments.' We bridge the gap between your marketing and your front desk.",
+        icon: Cpu,
+        color: "text-blue-500",
+        bg: "bg-blue-50"
+    }
+];
+
+const antiPositioning = [
+    {
+        title: "We are not a \"Jack-of-all-trades\" agency.",
+        description: "We don't do F&B, Real Estate, or E-commerce. We only speak Healthcare.",
+        icon: Ban
+    },
+    {
+        title: "We are not a \"churn and burn\" shop.",
+        description: "We don't outsource your account to interns. You work directly with strategists who understand the P&L of a private practice.",
+        icon: Users
+    },
+    {
+        title: "We are not \"Yes Men.\"",
+        description: "If you want to run a campaign that we know will fail or violate MOH guidelines, we will tell you. We are your partners, not just your vendors.",
+        icon: Activity
     }
 ];
 ---
 
-<Layout title="About Us | Lamanify - We Build Clinic Websites For Living">
+<Layout title="About Us | Lamanify - We Are Growth Engineers" description="Lamanify combines medical industry expertise with engineering rigor to build predictable growth engines for Malaysian clinics.">
     <main>
-        {/* Hero Section */}
+        {/* Header Section: The Manifesto */}
         <section class="relative pt-32 pb-24 overflow-hidden bg-slate-900">
             <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(var(--brand-rgb),0.15),transparent_50%)]"></div>
             <div class="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10"></div>
             <div class="container mx-auto px-4 relative z-10">
                 <div class="max-w-4xl">
                     <div class="fade-up inline-flex items-center rounded-full border border-brand/20 bg-brand/10 px-4 py-1.5 text-xs font-bold tracking-wider text-brand mb-8 uppercase">
-                        About Us
+                        The Manifesto
                     </div>
-                    <h1 class="fade-up text-5xl md:text-7xl font-black text-white mb-8 tracking-tight leading-[1.1]">
-                        We Build <span class="text-brand">Clinic Websites</span> For Living.
+                    <h1 class="fade-up text-4xl md:text-6xl lg:text-7xl font-black text-white mb-8 tracking-tight leading-[1.1]">
+                        We Are Not Just Marketers. <br/>
+                        <span class="text-brand">We Are Growth Engineers.</span>
                     </h1>
                     <p class="fade-up text-slate-400 text-xl md:text-2xl max-w-3xl leading-relaxed mb-10">
-                        Our mission is to assist our clients achieve growth through web technology and powerful marketing. We seek to unify the web and marketing journey to deliver a more remarkable buyer experience and, ultimately, drive growth for our clients.
+                        Lamanify was built on a simple premise: Healthcare marketing shouldn't be a guessing game. By combining medical industry expertise with engineering rigor, we build predictable growth engines for Malaysian clinics.
                     </p>
-                    <div class="fade-up flex flex-wrap gap-4">
-                        <Button client:load onClick={() => window.location.href = '/portfolio'} className="h-14 px-10 rounded-full text-lg font-bold shadow-lg shadow-brand/20">
-                            View Our Work
-                        </Button>
-                    </div>
                 </div>
             </div>
-            
             {/* Decorative Element */}
             <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-brand opacity-10 blur-[120px] rounded-full"></div>
         </section>
 
-        {/* Portfolio Preview / Mission Detail */}
+        {/* Section 1: The Origin Story */}
         <section class="py-24 bg-white relative overflow-hidden">
             <div class="container mx-auto px-4">
-                <div class="grid lg:grid-cols-2 gap-16 items-center">
-                    <div class="fade-up space-y-8">
-                        <div>
-                            <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">
-                                Creating Memorable Online Experience For Your Patients
-                            </h2>
-                            <p class="text-slate-600 text-lg leading-relaxed">
-                                We at Lamanify value collaboration. We take a holistic approach to creating websites that suit your needs and goals. We work hard to understand your market, audience and core business drivers so that we can make every design and engineering decision with a clear purpose and direction.
-                            </p>
-                        </div>
-                        
-                        <div class="grid grid-cols-2 gap-6">
-                            <div class="group cursor-pointer" onclick="window.location.href='/portfolio/klinik-pakar-wanita-aymira/'">
-                                <div class="relative aspect-[4/3] rounded-3xl overflow-hidden mb-4 shadow-xl group-hover:shadow-2xl transition-all duration-500">
-                                    <img 
-                                        src="https://www.lamanify.com/wp-content/uploads/2025/07/Klinik-Pakar-Wanita-Aymira-768x576.png.webp" 
-                                        alt="Klinik Pakar Wanita Aymira"
-                                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                                    />
-                                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
-                                        <span class="text-white font-bold">Klinik Aymira</span>
-                                    </div>
+                <div class="grid lg:grid-cols-12 gap-12 items-start">
+                    <div class="lg:col-span-5 fade-up">
+                        <div class="relative bg-slate-50 p-8 rounded-[32px] border border-slate-100 sticky top-32">
+                             <div class="absolute -top-4 -left-4 w-24 h-24 bg-brand/10 rounded-full blur-2xl"></div>
+                            <h3 class="text-2xl font-black text-slate-900 mb-6 leading-tight">
+                                Why a <span class="text-brand">UK-Graduated Engineer</span> Started a Healthcare Agency.
+                            </h3>
+                            <div class="flex items-center gap-4 mt-8 pt-8 border-t border-slate-200">
+                                <div class="w-12 h-12 bg-slate-200 rounded-full overflow-hidden">
+                                    {/* Placeholder for Azri Omar's photo if available/desired, otherwise generic avatar or initials */}
+                                    <div class="w-full h-full flex items-center justify-center text-slate-500 font-bold">AO</div>
                                 </div>
-                            </div>
-                            <div class="group cursor-pointer" onclick="window.location.href='/portfolio/klinik-d/'">
-                                <div class="relative aspect-[4/3] rounded-3xl overflow-hidden mb-4 shadow-xl group-hover:shadow-2xl transition-all duration-500">
-                                    <img 
-                                        src="https://www.lamanify.com/wp-content/uploads/2024/09/Lamanify-Website-Design-for-Clinics-Portfolio2-768x576.webp" 
-                                        alt="Klinik-D"
-                                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                                    />
-                                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
-                                        <span class="text-white font-bold">Klinik-D</span>
-                                    </div>
+                                <div>
+                                    <div class="font-bold text-slate-900">Azri Omar</div>
+                                    <div class="text-sm text-slate-500">Founder of Lamanify</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="fade-up lg:pl-12">
-                        <div class="relative">
-                            <div class="absolute -inset-4 bg-brand/5 rounded-[40px] blur-2xl"></div>
-                            <div class="relative bg-slate-50 p-10 md:p-12 rounded-[32px] border border-slate-100 shadow-sm">
-                                <h3 class="text-2xl font-bold text-slate-900 mb-6">Our Focus</h3>
-                                <div class="space-y-6">
-                                    <div class="flex items-start gap-4">
-                                        <div class="w-10 h-10 rounded-full bg-brand/10 flex items-center justify-center shrink-0">
-                                            <ArrowRight class="w-5 h-5 text-brand" />
-                                        </div>
-                                        <div>
-                                            <h4 class="font-bold text-slate-900 mb-1">Healthcare Specialists</h4>
-                                            <p class="text-slate-600">Tailored digital systems for medical professionals in Malaysia.</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-start gap-4">
-                                        <div class="w-10 h-10 rounded-full bg-brand/10 flex items-center justify-center shrink-0">
-                                            <ArrowRight class="w-5 h-5 text-brand" />
-                                        </div>
-                                        <div>
-                                            <h4 class="font-bold text-slate-900 mb-1">Growth Driven</h4>
-                                            <p class="text-slate-600">Every design decision is made to optimize for patient acquisition.</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-start gap-4">
-                                        <div class="w-10 h-10 rounded-full bg-brand/10 flex items-center justify-center shrink-0">
-                                            <ArrowRight class="w-5 h-5 text-brand" />
-                                        </div>
-                                        <div>
-                                            <h4 class="font-bold text-slate-900 mb-1">Modern Tech</h4>
-                                            <p class="text-slate-600">Using the latest web standards for speed, SEO, and security.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="lg:col-span-1"></div>
+
+                    <div class="lg:col-span-6 fade-up space-y-6 text-lg text-slate-600 leading-relaxed font-medium">
+                        <p>
+                            "For years, I built systems, experimentations, projects, data systems, softwares. In the engineering world, everything is tracked. If a project fails or breaks, we know why. If a user drops off, we know where.
+                        </p>
+                        <p>
+                            When I looked at how clinics were being marketed in Malaysia, I saw a disconnect. Doctors were paying for 'creativity' and 'brand awareness,' but they had no clarity on their ROI. Agencies were guessing.
+                        </p>
+                        <p class="text-slate-900 font-bold italic border-l-4 border-brand pl-6 my-8">
+                            I realized that scaling a clinic isn't an art project, it's an engineering problem. It requires data pipelines, CRM integrations, and compliance frameworks.
+                        </p>
+                        <p>
+                            So, I built Lamanify that specializes in healthcare. We stripped away the fluff and replaced it with a <strong class="text-brand">Performance Framework</strong>. We don't just 'run ads'; we build a digital infrastructure that captures, tracks, and converts patients on autopilot.
+                        </p>
+                        <p>
+                            We treat your clinic like a high-growth startup: fast, data-driven, and scalable."
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        {/* Values Section */}
+        {/* Section 2: Our Philosophy */}
         <section class="py-24 bg-slate-50 relative overflow-hidden">
+             <div class="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5"></div>
             <div class="container mx-auto px-4 relative z-10">
                 <div class="text-center max-w-3xl mx-auto mb-20 px-4">
-                    <h2 class="fade-up text-3xl md:text-5xl font-black text-slate-900 mb-6">Our Core Values</h2>
-                    <p class="fade-up text-slate-600 text-lg md:text-xl">
-                        The principles that guide every pixel we place and every line of code we write.
+                    <h2 class="fade-up text-3xl md:text-5xl font-black text-slate-900 mb-6">The Lamanify Standard.</h2>
+                    <p class="fade-up text-slate-600 text-lg">
+                        Cardinal rules for high-performance healthcare marketing.
                     </p>
                 </div>
                 
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {values.map((v, i) => (
+                <div class="grid md:grid-cols-3 gap-8">
+                    {philosophy.map((item, i) => (
                         <div class="fade-up group bg-white p-8 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                            <div class={`w-14 h-14 ${v.bg} rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500`}>
-                                <v.icon class={`w-7 h-7 ${v.color}`} />
+                            <div class={`w-14 h-14 ${item.bg} rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500`}>
+                                <item.icon class={`w-7 h-7 ${item.color}`} />
                             </div>
-                            <h3 class="text-2xl font-bold text-slate-900 mb-4">{v.title}</h3>
+                            <h3 class="text-2xl font-bold text-slate-900 mb-4">{item.title}</h3>
                             <p class="text-slate-600 leading-relaxed text-sm md:text-base">
-                                {v.description}
+                                {item.description}
                             </p>
                         </div>
                     ))}
@@ -173,26 +152,77 @@ const values = [
             </div>
         </section>
 
-        {/* CTA Section */}
-        <section class="py-24 bg-white">
+        {/* Section 3: Who We Are Not */}
+        <section class="py-24 bg-white relative overflow-hidden">
             <div class="container mx-auto px-4">
-                <div class="relative rounded-[48px] bg-slate-900 p-12 md:p-20 overflow-hidden text-center">
-                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(var(--brand-rgb),0.1),transparent_70%)]"></div>
-                    <div class="relative z-10 max-w-3xl mx-auto">
-                        <h2 class="fade-up text-3xl md:text-5xl font-black text-white mb-8 leading-tight">
-                            Get The Growth Results You’ve Always Wanted
-                        </h2>
-                        <p class="fade-up text-slate-400 text-xl mb-12">
-                            Ready to transform your clinic's digital presence? Let's build something remarkable together.
-                        </p>
-                        <div class="fade-up flex flex-col sm:flex-row justify-center gap-4">
-                            <Button client:load onClick={() => window.location.href = '/contact'} className="h-14 px-10 rounded-full text-lg font-bold">
-                                Book a Strategy Call
-                            </Button>
-                            <Button client:load variant="outline" onClick={() => window.location.href = '/portfolio'} className="h-14 px-10 rounded-full text-lg font-bold border-white/20 text-white hover:bg-white/10">
-                                View Our Work
-                            </Button>
+                 <div class="max-w-5xl mx-auto bg-slate-900 rounded-[48px] p-8 md:p-16 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_left,rgba(var(--brand-rgb),0.1),transparent_70%)]"></div>
+                    
+                    <div class="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+                        <div class="fade-up">
+                            <h2 class="text-3xl md:text-4xl font-black text-white mb-6">Who We Are Not</h2>
+                            <p class="text-slate-400 text-lg mb-8">
+                                We believe that clear boundaries make for better partnerships. We aren't for everyone, and that's intentional.
+                            </p>
+                            <div class="w-24 h-1 bg-brand rounded-full"></div>
                         </div>
+
+                        <div class="space-y-6">
+                            {antiPositioning.map((item) => (
+                                <div class="fade-up flex items-start gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
+                                    <div class="shrink-0 w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center text-red-400">
+                                        <item.icon class="w-5 h-5" />
+                                    </div>
+                                    <div>
+                                        <h4 class="text-white font-bold mb-1">{item.title}</h4>
+                                        <p class="text-slate-400 text-sm">{item.description}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {/* Section 4: The Vision */}
+        <section class="py-24 bg-slate-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto text-center">
+                    <div class="fade-up inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 text-brand text-sm font-bold mb-6">
+                        <Target class="w-4 h-4" />
+                        Our Vision
+                    </div>
+                    <h2 class="fade-up text-3xl md:text-5xl font-black text-slate-900 mb-8 leading-tight">
+                        Democratizing <span class="text-brand">Enterprise-Level</span> Growth.
+                    </h2>
+                    <p class="fade-up text-slate-600 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto mb-12">
+                        Historically, only large hospital groups could afford sophisticated, data-driven marketing teams. Lamanify exists to level the playing field. We bring enterprise-grade analytics, automation, and strategy to the private clinic owner.
+                    </p>
+                    <p class="fade-up text-slate-900 text-xl font-bold">
+                        Whether you are a solo GP, a specialist center, or a growing dental chain, you deserve a growth partner that works as hard as you do.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        {/* Section 5: Footer CTA */}
+        <section class="py-24 bg-white border-t border-slate-100">
+            <div class="container mx-auto px-4">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="fade-up text-4xl md:text-6xl font-black text-slate-900 mb-6">
+                        Stop Guessing. <br/><span class="text-brand">Start Scaling.</span>
+                    </h2>
+                    <p class="fade-up text-slate-600 text-xl mb-12">
+                        See if your practice qualifies for the Lamanify GrowthBooster Framework.
+                    </p>
+                    <div class="fade-up flex flex-col sm:flex-row justify-center gap-4">
+                        <Button client:load onClick={() => window.location.href = '/team'} className="h-14 px-10 rounded-full text-lg font-bold shadow-lg shadow-brand/20">
+                            Meet The Team
+                        </Button>
+                        <Button client:load variant="outline" onClick={() => window.location.href = '/careers'} className="h-14 px-10 rounded-full text-lg font-bold border-slate-200 text-slate-900 hover:bg-slate-50">
+                            View Open Roles
+                        </Button>
                     </div>
                 </div>
             </div>

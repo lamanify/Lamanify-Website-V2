@@ -1,0 +1,25 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Hero } from '../../components/specialist/Hero';
+import { Problem } from '../../components/specialist/Problem';
+import { Solution } from '../../components/specialist/Solution';
+import { Compliance } from '../../components/specialist/Compliance';
+import { Specialties } from '../../components/specialist/Specialties';
+import { CaseStudy } from '../../components/specialist/CaseStudy';
+import { FinalCTA } from '../../components/specialist/FinalCTA';
+---
+
+<Layout 
+    title="Digital Marketing for Medical Specialists | Lamanify" 
+    description="We help Malaysian Specialists & Consultants attract elective cases through prestige-focused patient education funnels. Build authority and own your flow."
+>
+    <main>
+        <Hero client:load />
+        <Problem client:visible />
+        <Solution client:visible />
+        <Compliance client:visible />
+        <Specialties client:visible />
+        <CaseStudy client:visible />
+        <FinalCTA client:visible />
+    </main>
+</Layout>
