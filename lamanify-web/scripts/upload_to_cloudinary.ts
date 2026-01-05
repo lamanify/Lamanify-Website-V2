@@ -7,7 +7,7 @@ const FUNCTION_NAME = 'upload-assets';
 const SUPABASE_URL = `https://${PROJECT_REF}.supabase.co/functions/v1/${FUNCTION_NAME}`;
 const ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5uZm1tb3ZtY3hqbG1iaXNybmt0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczOTA4ODIsImV4cCI6MjA4Mjk2Njg4Mn0.HsXQQDNgmqS7panva6kWDiGHU4PACvjLFtm_xtcAxn4';
 
-const FOLDER = 'portfolio_assets/Kita Dental';
+const FOLDER = 'portfolio_assets/Poliklinik Mediprima';
 const FILES = ['mobile_full.webp', 'desktop_full.webp'];
 const BASE_DIR = path.join(process.cwd(), 'temp_screenshots');
 

@@ -97,10 +97,11 @@ export default function SolutionsMegaMenu({ className }: { className?: string })
                             )}
                         >
                             <div className="flex gap-4">
-                                className={cn(
-                                    "w-6 h-6 mt-1",
-                                    activeCategory === category.id ? "text-brand" : "text-slate-400 group-hover:text-brand"
-                                )}
+                                <category.icon
+                                    className={cn(
+                                        "w-6 h-6 mt-1",
+                                        activeCategory === category.id ? "text-brand" : "text-slate-400 group-hover:text-brand"
+                                    )}
                                 />
                                 <div>
                                     <h3 className={cn(

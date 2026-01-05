@@ -18,7 +18,7 @@ function getScreenshotOneUrl(options: any, accessKey = SCREENSHOTONE_ACCESS_KEY,
     return `${baseUrl}?${params.toString()}&signature=${signature}`;
 }
 
-const targetUrl = 'https://www.kitadental.com.my/';
+const targetUrl = 'https://www.mediprima.asia/';
 const downloadsDir = path.join(process.cwd(), 'temp_screenshots'); // Creates this temporary folder relative to where you run it
 
 if (!fs.existsSync(downloadsDir)) {

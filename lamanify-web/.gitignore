@@ -22,3 +22,8 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# temporary and generated files
+temp_screenshots/
+temp_screenshots/*.webp
+temp_screenshots/*.png

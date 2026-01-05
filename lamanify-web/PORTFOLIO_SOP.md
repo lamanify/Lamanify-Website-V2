@@ -13,8 +13,9 @@ Ensure you have the following installed/configured:
 ## Workflow Overview
 
 1.  **Generate Assets**: Use `generate_mockups.ts` to take automated screenshots locally.
-2.  **Upload Assets**: Use `upload_to_cloudinary.ts` which securely proxies to Supabase Edge Function (`upload-assets`).
-3.  **Create Page**: Duplicate the template and link the assets.
+2.  **Logo Extraction**: Use `upload_logo_script.ts` (template) to scrape/upload the logo.
+3.  **Upload Assets**: Use `upload_to_cloudinary.ts` which securely proxies to Supabase Edge Function (`upload-assets`).
+4.  **Create Page**: Duplicate the template and link the assets.
 
 ---
 
@@ -32,6 +33,24 @@ We use **ScreenshotOne** to autogenerate consistent device-specific views.
     ```
     > **Tip**: If popups appear, set `block_banners_by_heuristics: true` in the script options.
     This will save images to `temp_screenshots/`.
+
+---
+
+## Step 1.5: Logo Extraction & Upload
+
+Clients often don't provide a high-res logo transparently. We grab it directly from their site.
+
+1.  **Find Logo URL**: 
+    - Go to client's website.
+    - Right-click the logo -> "Open Image in New Tab".
+    - Copy the URL.
+2.  **Create/Run Script**:
+    - Create a script (e.g., `scripts/upload_client_logo.ts`) based on `scripts/upload_klinik_aurora_logo.ts`.
+    - Update the `LOGO_URL` and `UPLOAD_FOLDER`.
+    - Run it: `npx tsx scripts/upload_client_logo.ts`.
+3.  **Result**:
+    - You will get a Cloudinary URL (e.g., `.../Klinik%20Aurora/logo.png`).
+    - Save this for Step 3.
 
 ---
 
@@ -60,7 +79,19 @@ We use a Supabase Edge Function to handle uploads securely without exposing Clou
 3.  **Mockup Frames**: The template uses standard Cloudinary frames:
     - **iPhone 16**: `Lamanify_39_aet0ul.webp`
     - **iPad Landscape**: `Untitled_2_oijgni.webp`
-4.  **UI Implementation**: The screenshots are layered behind/inside these frames using `absolute` positioning within the Hero section. Ensure `mobileMockupUrl` and `tabletMockupUrl` are correctly mapped.
+4.  **Logo Implementation**:
+    - Add `const logoUrl = "YOUR_CLOUDINARY_URL";`
+    - Replace the Hero `<h1>` badge with:
+      ```astro
+      <div class="mb-8">
+         <img 
+            src={logoUrl} 
+            alt="Client Logo" 
+            class="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-500 ease-in-out opacity-90 hover:opacity-100"
+         />
+      </div>
+      ```
+5.  **UI Implementation**: The screenshots are layered behind/inside these frames using `absolute` positioning within the Hero section. Ensure `mobileMockupUrl` and `tabletMockupUrl` are correctly mapped.
 
 ## Step 4: Verification
 
